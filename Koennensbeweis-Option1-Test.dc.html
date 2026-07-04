@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  @media print{ .no-print{display:none!important} body{background:#fff!important} }
+</style>
+</helmet>
+<div style="min-height:100vh; background:#f4f1ea; background-image:radial-gradient(rgba(60,50,40,.07) 1.2px, transparent 1.2px); background-size:22px 22px; padding:40px 24px 80px; font-family:'Schibsted Grotesk',system-ui,sans-serif; color:#2c2722;">
+  <div style="max-width:880px; margin:0 auto;">
+
+    <div class="no-print" style="margin-bottom:18px;">
+      <a href="Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a;">← Zurück zur Pinnwand</a>
+    </div>
+
+    <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#9a8f7d; margin-bottom:12px;">Könnensbeweis · Option 1 · PoWi Grundbegriffe</div>
+    <h1 style="margin:0 0 8px; font:700 clamp(26px,3.6vw,38px)/1.12 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#221d18;">Fachbegriffe-Test (30 Minuten)</h1>
+    <p style="margin:0 0 22px; font:500 15.5px/1.55 'Schibsted Grotesk',sans-serif; color:#6f665a; max-width:70ch;">Testet die zentralen PoWi-Grundbegriffe aus den Inputs (Kommune &amp; Ebenen, Demokratie, Grundgesetz, Bedürfnis &amp; Markt, Medien). Vier Niveaustufen — wähle deine Stufe. Der Test wertet sich am Ende selbst aus.</p>
+
+    <div class="no-print" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px;">
+      <sc-for list="{{ levelTabs }}" as="tab" hint-placeholder-count="4">
+        <button onClick="{{ tab.onClick }}" style="cursor:pointer; padding:10px 18px; border-radius:11px; border:1.5px solid {{ tab.border }}; background:{{ tab.bg }}; color:{{ tab.color }}; font:700 14px 'Schibsted Grotesk',sans-serif;">{{ tab.label }}</button>
+      </sc-for>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <input placeholder="Dein Name" value="{{ studentName }}" onChange="{{ onNameChange }}" style="padding:9px 13px; border-radius:9px; border:1.5px solid #e0d9cb; background:#fffdf8; font:500 14px 'Schibsted Grotesk',sans-serif; color:#2c2722; width:220px;">
+      <span style="font:600 13px 'Schibsted Grotesk',sans-serif; color:#9a8f7d;">Niveau: {{ currentLevelLabel }}</span>
+    </div>
+
+    <div style="height:1px; background:#e0d9cb; margin:18px 0 22px;"></div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <sc-for list="{{ visibleQuestions }}" as="q" hint-placeholder-count="8">
+        <div class="avoid" style="border:1.5px solid {{ q.borderColor }}; border-radius:14px; padding:16px 18px; background:#fffdf8;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:9px;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:{{ q.badgeColor }}; color:#fff; font:700 13px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">{{ q.num }}</span>
+            <span style="font:700 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">{{ q.text }}</span>
+          </div>
+
+          <sc-if value="{{ q.isWordbank }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0 0 8px; font:400 13px 'Schibsted Grotesk',sans-serif; color:#9a8f7d;">Wortspeicher: {{ q.wordbankText }}</p>
+          </sc-if>
+
+          <sc-if value="{{ q.isChoice }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex; flex-direction:column; gap:7px;">
+              <sc-for list="{{ q.options }}" as="opt" hint-placeholder-count="4">
+                <label style="display:flex; align-items:center; gap:9px; padding:8px 10px; border-radius:9px; background:{{ opt.rowBg }}; cursor:pointer;">
+                  <input type="{{ q.inputType }}" name="{{ q.name }}" checked="{{ opt.checked }}" onChange="{{ opt.onSelect }}" style="width:16px; height:16px;">
+                  <span style="font:500 14px 'Schibsted Grotesk',sans-serif; color:#3b352d;">{{ opt.label }}</span>
+                </label>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ q.isReflection }}" hint-placeholder-val="{{ false }}">
+            <textarea placeholder="Deine Antwort in eigenen Worten…" value="{{ q.reflectionText }}" onChange="{{ q.onReflectionChange }}" style="width:100%; min-height:70px; padding:9px 11px; border-radius:9px; border:1.5px solid #e0d9cb; font:400 14px/1.4 'Schibsted Grotesk',sans-serif; color:#2c2722; resize:vertical;"></textarea>
+            <div style="display:{{ q.solutionDisplay }}; margin-top:8px; padding:10px 12px; border-radius:9px; background:#f7f3fb; border:1px solid #e2d5f0; font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#433d35;"><b>Musterlösung:</b> {{ q.solutionText }}</div>
+            <div style="display:flex; align-items:center; gap:10px; margin-top:8px;">
+              <button onClick="{{ q.toggleSolution }}" style="cursor:pointer; padding:6px 12px; border-radius:8px; border:1.5px solid #e0d9cb; background:#fffdf8; font:600 12.5px 'Schibsted Grotesk',sans-serif; color:#6f665a;">{{ q.solutionBtnLabel }}</button>
+              <label style="display:flex; align-items:center; gap:6px; font:500 13px 'Schibsted Grotesk',sans-serif; color:#3b352d;">
+                <input type="checkbox" checked="{{ q.selfCorrect }}" onChange="{{ q.onSelfCorrectChange }}"> Meine Antwort war richtig
+              </label>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ q.showFeedback }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top:10px; padding:9px 12px; border-radius:9px; background:{{ q.feedbackBg }}; font:600 13.5px 'Schibsted Grotesk',sans-serif; color:{{ q.feedbackColor }};">{{ q.feedbackText }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+
+    <div class="no-print" style="display:flex; gap:12px; margin-top:26px;">
+      <button onClick="{{ onSubmit }}" style="cursor:pointer; padding:12px 22px; border-radius:11px; border:none; background:#2c2722; color:#fff; font:700 14px 'Schibsted Grotesk',sans-serif;">Auswerten</button>
+      <button onClick="{{ onReset }}" style="cursor:pointer; padding:12px 20px; border-radius:11px; border:1.5px solid #e0d9cb; background:#fffdf8; color:#6f665a; font:600 14px 'Schibsted Grotesk',sans-serif;">Zurücksetzen</button>
+    </div>
+
+    <sc-if value="{{ isEvaluated }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:30px; border:2px solid #2c2722; border-radius:16px; padding:24px 26px; background:#fffdf8;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:#9a8f7d; margin-bottom:10px;">Ergebniskarte — zum Zeigen/Ausdrucken</div>
+        <div style="display:flex; flex-wrap:wrap; gap:22px; align-items:baseline; margin-bottom:6px;">
+          <div><span style="font:600 13px 'Schibsted Grotesk',sans-serif; color:#6f665a;">Name: </span><span style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15;">{{ resultName }}</span></div>
+          <div><span style="font:600 13px 'Schibsted Grotesk',sans-serif; color:#6f665a;">Niveau: </span><span style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15;">{{ resultLevel }}</span></div>
+          <div><span style="font:600 13px 'Schibsted Grotesk',sans-serif; color:#6f665a;">Datum: </span><span style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15;">{{ resultDate }}</span></div>
+        </div>
+        <div style="font:800 30px 'Bricolage Grotesque',sans-serif; color:oklch(0.55 0.14 252); margin:10px 0 4px;">{{ resultScore }} / {{ resultMax }} Punkte</div>
+        <div style="font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a;">{{ resultPercent }} % richtig</div>
+        <button onClick="{{ onPrint }}" class="no-print" style="margin-top:14px; cursor:pointer; padding:10px 18px; border-radius:10px; border:none; background:#2c2722; color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">Ergebniskarte drucken</button>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+
+  // ---- Question bank per level ----
+  data = {
+    A: [
+      { text: 'Setze das passende Wort ein: Eine ___ ist der Ort, an dem eine Gemeinde ihre Verwaltung hat.', type:'radio', name:'a1', wordbank:'Rathaus, Schule, Wald', options:['Rathaus','Schule','Wald'], correct:'Rathaus' },
+      { text: 'Wer leitet die Verwaltung einer Gemeinde?', type:'radio', name:'a2', options:['Bürgermeister:in','Klassensprecher:in','Lehrer:in'], correct:'Bürgermeister:in' },
+      { text: 'Was bedeutet „Demokratie" wörtlich übersetzt?', type:'radio', name:'a3', options:['Herrschaft des Volkes','Herrschaft eines Königs','Herrschaft der Reichen'], correct:'Herrschaft des Volkes' },
+      { text: 'Wähle die richtige Wahlregel aus: Bei einer Wahl darf niemand erfahren, wen du gewählt hast. Das nennt man…', type:'radio', name:'a4', options:['geheime Wahl','laute Wahl','doppelte Wahl'], correct:'geheime Wahl' },
+      { text: 'Das Grundgesetz ist…', type:'radio', name:'a5', options:['die Verfassung von Deutschland','ein Schulbuch','ein Gesetz nur für Hessen'], correct:'die Verfassung von Deutschland' },
+      { text: 'Ein Bedürfnis ist…', type:'radio', name:'a6', options:['etwas, das du wirklich brauchst','immer ein teures Produkt','dasselbe wie ein Wunsch'], correct:'etwas, das du wirklich brauchst' },
+      { text: 'Eine Information nennt man auch…', type:'radio', name:'a7', options:['Nachricht','Meinung','Werbung'], correct:'Nachricht' },
+      { text: 'Woran erkennt man oft eine Meinung statt einer Information?', type:'radio', name:'a8', options:['an Wörtern wie „gut" oder „schlimm"','an Zahlen','an einem Datum'], correct:'an Wörtern wie „gut" oder „schlimm"' },
+      { text: 'Schreibe einen Satz: Was macht dein Bürgermeister/deine Bürgermeisterin?', type:'reflection', name:'a9' },
+      { text: 'Schreibe einen Satz: Was ist ein Bedürfnis? Nenne ein eigenes Beispiel.', type:'reflection', name:'a10' },
+    ],
+    M: [
+      { text: 'Was ist der Unterschied zwischen Gemeinde und Kommune?', type:'radio', name:'m1', options:['Kommune ist der Oberbegriff, Gemeinde eine Form davon','Es gibt keinen Unterschied überhaupt','Kommune ist nur ein anderes Wort für Bundesland'], correct:'Kommune ist der Oberbegriff, Gemeinde eine Form davon' },
+      { text: 'Wer entscheidet über den Haushalt (Einnahmen/Ausgaben) einer Gemeinde?', type:'radio', name:'m2', options:['der Gemeinderat','nur der Bürgermeister allein','das Bürgerbüro'], correct:'der Gemeinderat' },
+      { text: 'Was regelt der Föderalismus in Deutschland?', type:'radio', name:'m3', options:['die Verteilung der Macht auf Gemeinde, Land und Bund','nur die Steuern','nur die Schulferien'], correct:'die Verteilung der Macht auf Gemeinde, Land und Bund' },
+      { text: 'Welche Wahlgrundsätze gehören zu einer echten Demokratie? (auswählen)', type:'checkbox', name:'m4', options:['frei','gleich','geheim','laut'], correct:['frei','gleich','geheim'] },
+      { text: 'Was schützt Artikel 1 des Grundgesetzes?', type:'radio', name:'m5', options:['die Menschenwürde','nur das Eigentum','nur die Meinungsfreiheit'], correct:'die Menschenwürde' },
+      { text: 'Was ist der Unterschied zwischen Wunsch und Bedarf?', type:'radio', name:'m6', options:['Bedarf ist der Teil der Wünsche, den man sich leisten kann','Wunsch und Bedarf bedeuten dasselbe','Bedarf ist immer teurer als ein Wunsch'], correct:'Bedarf ist der Teil der Wünsche, den man sich leisten kann' },
+      { text: 'Wie entsteht laut Marktprinzip ein hoher Preis?', type:'radio', name:'m7', options:['wenig Angebot, viel Nachfrage','viel Angebot, wenig Nachfrage','das ist reiner Zufall'], correct:'wenig Angebot, viel Nachfrage' },
+      { text: 'Warum sollte man vor dem Teilen einer Nachricht die Quelle prüfen?', type:'radio', name:'m8', options:['um zu wissen, ob die Information verlässlich ist','weil es sonst verboten ist','das ist nicht wichtig'], correct:'um zu wissen, ob die Information verlässlich ist' },
+      { text: 'Erkläre in 2–3 Sätzen den Unterschied zwischen Information und Meinung.', type:'reflection', name:'m9' },
+      { text: 'Erkläre in 2–3 Sätzen, was kommunale Selbstverwaltung bedeutet.', type:'reflection', name:'m10' },
+    ],
+    R: [
+      { text: 'Ein Dorf beschließt eigenständig, einen neuen Spielplatz zu bauen, ohne den Bund zu fragen. Welches Prinzip zeigt das?', type:'radio', name:'r1', options:['kommunale Selbstverwaltung','Bundesgesetzgebung','Diktatur'], correct:'kommunale Selbstverwaltung' },
+      { text: 'In Hessen gelten andere Schulferien als in Bayern. Welches Prinzip erklärt das am besten?', type:'radio', name:'r2', options:['Föderalismus / Bildung ist Ländersache','Zufall der Kalenderplanung','ein Fehler der Verwaltung'], correct:'Föderalismus / Bildung ist Ländersache' },
+      { text: 'Eine Mehrheit stimmt dafür, einer Minderheit ihre Grundrechte zu entziehen. Ist das laut Grundgesetz zulässig?', type:'radio', name:'r3', options:['Nein — Grundrechte gelten für alle, unabhängig von Mehrheitsentscheidungen','Ja, die Mehrheit darf das immer entscheiden','Nur wenn der Bürgermeister zustimmt'], correct:'Nein — Grundrechte gelten für alle, unabhängig von Mehrheitsentscheidungen' },
+      { text: 'Zwei Freund:innen streiten sich um die letzte Orange. Die eine will nur die Schale, der andere nur das Fruchtfleisch. Was zeigt dieses Beispiel?', type:'radio', name:'r4', options:['Hinter Positionen stecken oft unterschiedliche Interessen','Streit lässt sich nie lösen','Kompromisse sind immer unfair'], correct:'Hinter Positionen stecken oft unterschiedliche Interessen' },
+      { text: 'Ein Spiel ist "kostenlos", bietet aber Lootboxen an. Was trifft zu?', type:'checkbox', name:'r5', options:['Das Spiel verdient über In-App-Käufe Geld','Lootboxen zeigen den Inhalt vorher genau','Das ähnelt einem Glücksspiel-Mechanismus','Lootboxen sind für Kinder unbedenklich'], correct:['Das Spiel verdient über In-App-Käufe Geld','Das ähnelt einem Glücksspiel-Mechanismus'] },
+      { text: 'Warum verbreiten sich Fake News oft schneller als echte Nachrichten?', type:'radio', name:'r6', options:['weil sie emotionaler/schockierender formuliert sind','weil sie immer kürzer sind','weil sie amtlich geprüft wurden'], correct:'weil sie emotionaler/schockierender formuliert sind' },
+      { text: 'Ergänze sinngemäß: Ein Kompromiss unterscheidet sich von einer Gewinner-Verlierer-Lösung dadurch, dass…', type:'radio', name:'r7', options:['beide Seiten etwas abgeben, aber auch etwas gewinnen','eine Seite immer alles bekommt','es keine Einigung gibt'], correct:'beide Seiten etwas abgeben, aber auch etwas gewinnen' },
+      { text: 'Erkläre an einem eigenen Beispiel, warum Angebot und Nachfrage den Preis einer Ware verändern können.', type:'reflection', name:'r8' },
+      { text: 'Erkläre, warum Grundrechte auch dann gelten, wenn eine Mehrheit dagegen stimmt.', type:'reflection', name:'r9' },
+    ],
+    E: [
+      { text: 'Erkläre in eigenen Worten den Unterschied zwischen Mehrheitsprinzip und Minderheitenschutz, und warum beide zusammen nötig sind.', type:'reflection', name:'e1' },
+      { text: 'Ein Gemeinderat und der Bundestag beschließen beide ein Gesetz zum selben Thema, die sich widersprechen. Erkläre, wie der deutsche Föderalismus (Art. 70ff. GG) solche Konflikte grundsätzlich regelt.', type:'reflection', name:'e2' },
+      { text: 'Diskutiere: Wo endet Meinungsfreiheit (Art. 5 GG), und wo beginnt eine strafbare Beleidigung oder Verleumdung? Nenne ein eigenes Beispiel.', type:'reflection', name:'e3' },
+      { text: 'Erkläre den Unterschied zwischen Opportunitätskosten und dem eigentlichen Preis einer Ware an einem selbst gewählten Beispiel.', type:'reflection', name:'e4' },
+      { text: 'Ein KI-generiertes Bild verbreitet sich als „echtes Foto" in sozialen Medien. Erkläre, welche Verantwortung Verbreiter:innen (nicht nur Ersteller:innen) tragen.', type:'reflection', name:'e5' },
+      { text: 'Vergleiche kommunale Selbstverwaltung und repräsentative Demokratie auf Bundesebene: Was ist strukturell ähnlich, was unterscheidet sich?', type:'reflection', name:'e6' },
+      { text: 'Welche Aussagen zu Föderalismus in Deutschland sind richtig? (auswählen)', type:'checkbox', name:'e7', options:['Bildung ist überwiegend Ländersache','Alle Gesetze gelten bundesweit identisch','Kommunen haben ein Recht auf Selbstverwaltung','Der Bund darf jederzeit Landesgesetze ignorieren'], correct:['Bildung ist überwiegend Ländersache','Kommunen haben ein Recht auf Selbstverwaltung'] },
+      { text: 'Welche Aussagen zu Meinungsfreiheit sind richtig? (auswählen)', type:'checkbox', name:'e8', options:['Sie ist in Art. 5 GG verankert','Sie gilt völlig grenzenlos, auch bei Beleidigungen','Sie schützt auch unbequeme Meinungen','Sie kann durch andere Gesetze begrenzt werden'], correct:['Sie ist in Art. 5 GG verankert','Sie schützt auch unbequeme Meinungen','Sie kann durch andere Gesetze begrenzt werden'] },
+    ],
+  };
+
+  solutions = {
+    a9: 'Der Bürgermeister/Die Bürgermeisterin leitet die Verwaltung der Gemeinde und vertritt sie nach außen.',
+    a10: 'Ein Bedürfnis ist etwas, das ich wirklich brauche, zum Beispiel Essen oder Schulsachen.',
+    m9: 'Eine Information beschreibt etwas, das überprüfbar ist (ein Fakt) – zum Beispiel eine Zahl oder ein Ereignis. Eine Meinung ist eine persönliche Bewertung, z. B. ob man etwas gut oder schlecht findet, und lässt sich nicht einfach als "wahr" oder "falsch" prüfen.',
+    m10: 'Kommunale Selbstverwaltung bedeutet, dass eine Gemeinde viele Angelegenheiten vor Ort selbst regeln darf (z. B. Straßenbau, Schulen, Freizeitangebote), statt dass alles vom Land oder Bund vorgegeben wird (Art. 28 GG).',
+    r8: 'Ist ein Produkt knapp (wenig Angebot) und wollen es viele haben (hohe Nachfrage), steigt der Preis – z. B. bei einem gefragten Spiel kurz vor Weihnachten. Gibt es dagegen viel Angebot und wenig Nachfrage, sinkt der Preis, z. B. bei Erdbeeren im Sommer.',
+    r9: 'Grundrechte (z. B. Würde, Gleichheit) sichern jedem Menschen einen Mindestschutz zu, der nicht zur Verhandlungsmasse einer Mehrheitsentscheidung werden darf. Sonst könnte eine Mehrheit die Rechte einer Minderheit einfach abschaffen ("Tyrannei der Mehrheit").',
+    e1: 'Mehrheitsprinzip: Entscheidungen werden nach Stimmenmehrheit getroffen. Minderheitenschutz: Grundrechte gelten trotzdem für alle, auch Überstimmte. Ohne Minderheitenschutz könnte die Mehrheit die Rechte anderer einfach abschaffen ("Tyrannei der Mehrheit").',
+    e2: 'Das Grundgesetz legt in Art. 70ff. fest, welche Ebene wofür zuständig ist (ausschließliche, konkurrierende Gesetzgebung). Bei einem echten Widerspruch in einem Bundeszuständigkeitsbereich gilt Bundesrecht vor Landesrecht ("Bundesrecht bricht Landesrecht", Art. 31 GG); zudem darf jede Ebene nur in ihrem zugewiesenen Bereich Gesetze erlassen.',
+    e3: 'Meinungsfreiheit schützt das Äußern von Werturteilen, auch unbequemen. Sie endet dort, wo andere in ihrer Würde verletzt, beleidigt, bedroht oder durch nachweislich falsche Tatsachenbehauptungen verleumdet werden – dort greifen Strafgesetze (z. B. Beleidigung, üble Nachrede).',
+    e4: 'Der Preis ist der Betrag, den man für eine Ware zahlt. Opportunitätskosten sind das, worauf man verzichtet, wenn man sich für diese Ware entscheidet (die entgangene Alternative) – z. B.: Preis eines Spiels = 15 €; Opportunitätskosten = der Kinobesuch, den man sich dafür nicht mehr leisten kann.',
+    e5: 'Wer ein Bild teilt, wird selbst zur Quelle für seine Kontakte – auch ohne das Bild erstellt zu haben. Verbreiter:innen tragen Mitverantwortung, weil sie zur Reichweite und Glaubwürdigkeit der Fälschung beitragen; deshalb sollte man vor dem Teilen prüfen (Quelle, Bildrückwärtssuche).',
+    e6: 'Beide beruhen auf gewählten Vertreter:innen, die stellvertretend entscheiden. Unterschied: Kommunale Selbstverwaltung betrifft nur lokale Angelegenheiten und ist Teil eines föderalen Mehrebenensystems, während der Bundestag für gesamtstaatliche Fragen zuständig ist und dem Grundgesetz direkt unterliegt.',
+  };
+
+  levelMeta = {
+    A: { label: 'A', color: 'oklch(0.62 0.15 145)' },
+    M: { label: 'M', color: 'oklch(0.55 0.14 252)' },
+    R: { label: 'R', color: 'oklch(0.62 0.13 58)' },
+    E: { label: 'E', color: 'oklch(0.52 0.16 300)' },
+  };
+
+  state = {
+    level: 'M',
+    name: '',
+    answers: {},      // name -> selected value (radio) or array (checkbox) or text (reflection)
+    selfCorrect: {},   // name -> bool for reflection self-report
+    solutionShown: {}, // name -> bool
+    evaluated: false,
+    result: null,
+  };
+
+  setLevel(l) { this.setState({ level: l, evaluated: false }); }
+  onName(e) { this.setState({ name: e.target.value }); }
+
+  selectRadio(qname, val) {
+    this.setState(st => ({ answers: { ...st.answers, [qname]: val } }));
+  }
+  toggleCheckbox(qname, val) {
+    this.setState(st => {
+      const cur = Array.isArray(st.answers[qname]) ? st.answers[qname] : [];
+      const next = cur.includes(val) ? cur.filter(x => x !== val) : [...cur, val];
+      return { answers: { ...st.answers, [qname]: next } };
+    });
+  }
+  setReflection(qname, val) {
+    this.setState(st => ({ answers: { ...st.answers, [qname]: val } }));
+  }
+  toggleSolution(qname) {
+    this.setState(st => ({ solutionShown: { ...st.solutionShown, [qname]: !st.solutionShown[qname] } }));
+  }
+  setSelfCorrect(qname, val) {
+    this.setState(st => ({ selfCorrect: { ...st.selfCorrect, [qname]: val } }));
+  }
+
+  reset() {
+    this.setState({ answers: {}, selfCorrect: {}, solutionShown: {}, evaluated: false, result: null });
+  }
+
+  evaluate() {
+    const qs = this.data[this.state.level];
+    let score = 0, max = 0;
+    for (const q of qs) {
+      if (q.type === 'reflection') {
+        max += 1;
+        if (this.state.selfCorrect[q.name]) score += 1;
+      } else if (q.type === 'checkbox') {
+        max += 1;
+        const given = (this.state.answers[q.name] || []).slice().sort();
+        const correct = q.correct.slice().sort();
+        if (JSON.stringify(given) === JSON.stringify(correct)) score += 1;
+      } else {
+        max += 1;
+        if (this.state.answers[q.name] === q.correct) score += 1;
+      }
+    }
+    const date = new Date().toLocaleDateString('de-DE');
+    this.setState({
+      evaluated: true,
+      result: { score, max, percent: Math.round((score / max) * 100), date }
+    });
+  }
+
+  print() { window.print(); }
+
+  renderVals() {
+    const st = this.state;
+    const levelTabs = Object.keys(this.levelMeta).map(key => {
+      const active = st.level === key;
+      const meta = this.levelMeta[key];
+      return {
+        key, label: meta.label, onClick: () => this.setLevel(key),
+        bg: active ? meta.color : '#fffdf8', color: active ? '#fff' : meta.color,
+        border: active ? meta.color : '#e0d9cb'
+      };
+    });
+
+    const qs = this.data[st.level];
+    const meta = this.levelMeta[st.level];
+
+    const visibleQuestions = qs.map((q, i) => {
+      const num = i + 1;
+      const base = {
+        num, text: q.text, name: q.name,
+        borderColor: '#e8e2d6', badgeColor: meta.color,
+        isWordbank: !!q.wordbank, wordbankText: q.wordbank || '',
+        isChoice: q.type === 'radio' || q.type === 'checkbox',
+        isReflection: q.type === 'reflection',
+        inputType: q.type === 'checkbox' ? 'checkbox' : 'radio',
+        showFeedback: false, feedbackText: '', feedbackBg: '', feedbackColor: ''
+      };
+
+      if (q.type === 'radio') {
+        base.options = q.options.map(opt => ({
+          label: opt, checked: st.answers[q.name] === opt,
+          rowBg: st.evaluated ? (opt === q.correct ? 'oklch(0.62 0.15 145 / 0.18)' : (st.answers[q.name] === opt ? 'oklch(0.62 0.13 30 / 0.14)' : 'transparent')) : 'transparent',
+          onSelect: () => this.selectRadio(q.name, opt)
+        }));
+        if (st.evaluated) {
+          const correctPick = st.answers[q.name] === q.correct;
+          base.showFeedback = true;
+          base.feedbackText = correctPick ? '✓ Richtig' : `✗ Richtige Antwort: ${q.correct}`;
+          base.feedbackBg = correctPick ? 'oklch(0.62 0.15 145 / 0.15)' : 'oklch(0.62 0.13 30 / 0.12)';
+          base.feedbackColor = correctPick ? 'oklch(0.4 0.13 150)' : 'oklch(0.45 0.13 30)';
+        }
+      } else if (q.type === 'checkbox') {
+        const given = st.answers[q.name] || [];
+        base.options = q.options.map(opt => ({
+          label: opt, checked: given.includes(opt),
+          rowBg: st.evaluated ? (q.correct.includes(opt) ? 'oklch(0.62 0.15 145 / 0.18)' : (given.includes(opt) ? 'oklch(0.62 0.13 30 / 0.14)' : 'transparent')) : 'transparent',
+          onSelect: () => this.toggleCheckbox(q.name, opt)
+        }));
+        if (st.evaluated) {
+          const correctSet = JSON.stringify(given.slice().sort()) === JSON.stringify(q.correct.slice().sort());
+          base.showFeedback = true;
+          base.feedbackText = correctSet ? '✓ Richtig' : `✗ Richtige Antworten: ${q.correct.join(', ')}`;
+          base.feedbackBg = correctSet ? 'oklch(0.62 0.15 145 / 0.15)' : 'oklch(0.62 0.13 30 / 0.12)';
+          base.feedbackColor = correctSet ? 'oklch(0.4 0.13 150)' : 'oklch(0.45 0.13 30)';
+        }
+      } else if (q.type === 'reflection') {
+        base.reflectionText = st.answers[q.name] || '';
+        base.onReflectionChange = (e) => this.setReflection(q.name, e.target.value);
+        base.solutionDisplay = st.solutionShown[q.name] ? 'block' : 'none';
+        base.solutionText = this.solutions[q.name] || '';
+        base.solutionBtnLabel = st.solutionShown[q.name] ? 'Musterlösung verbergen' : 'Musterlösung anzeigen';
+        base.toggleSolution = () => this.toggleSolution(q.name);
+        base.selfCorrect = !!st.selfCorrect[q.name];
+        base.onSelfCorrectChange = (e) => this.setSelfCorrect(q.name, e.target.checked);
+      }
+      return base;
+    });
+
+    return {
+      levelTabs, visibleQuestions,
+      studentName: st.name, onNameChange: (e) => this.onName(e),
+      currentLevelLabel: meta.label,
+      onSubmit: () => this.evaluate(),
+      onReset: () => this.reset(),
+      isEvaluated: st.evaluated,
+      resultName: st.name || '—',
+      resultLevel: meta.label,
+      resultDate: st.result ? st.result.date : '',
+      resultScore: st.result ? st.result.score : 0,
+      resultMax: st.result ? st.result.max : 0,
+      resultPercent: st.result ? st.result.percent : 0,
+      onPrint: () => this.print(),
+    };
+  }
+}
+</script>
+</body>
+</html>
