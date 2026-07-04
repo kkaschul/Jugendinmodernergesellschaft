@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  .doc-frame{width:100%;border-collapse:collapse}
+  .doc-frame td{padding:0}
+  .hdr-space,.ftr-space{display:none}
+  .avoid{break-inside:avoid}
+  .pagebreak{break-before:page}
+  @page{size:A4;margin:0}
+  @media print{
+    html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .sheet{box-shadow:none!important;margin:0!important;border-radius:0!important;width:100%!important;min-height:auto!important}
+    .hdr-space,.ftr-space{display:table-cell;height:14mm}
+    h1,h2,h3,h4{break-after:avoid}
+    p,li{orphans:3;widows:3}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:820px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / als PDF speichern</button>
+  </div>
+
+  <div class="sheet" style="max-width:820px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:20px;">
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.62 0.13 58); color:#fff; font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.02em;">Themen-Input</span>
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.62 0.13 58 / 0.16); color:oklch(0.62 0.13 58); font:600 12px 'Schibsted Grotesk',sans-serif;">Themenfeld 7.3 · Wirtschaften im privaten Haushalt</span>
+        <span style="padding:4px 11px; border-radius:999px; background:#efe9dc; color:#6f665a; font:600 12px 'Schibsted Grotesk',sans-serif;">20-Minuten-Input</span>
+      </div>
+
+      <h1 style="margin:0 0 6px; font:700 33px/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#1f1a15;">Wo bleibt eigentlich mein Geld?</h1>
+      <p style="margin:0 0 26px; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Wie behalte ich den Überblick über mein (Taschen-)Geld? Ein Fachinput für Jahrgang 7 (Politik & Wirtschaft, Hessen).</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; padding:18px 20px; background:#faf7f0; margin-bottom:26px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:11px;">Lernziel · Kompetenzen &amp; Operatoren (Referenzrahmen Hessen)</div>
+        <p style="margin:0 0 13px; font:500 15.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;">Die Schülerinnen und Schüler …</p>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.62 0.13 58 / 0.16); color:oklch(0.62 0.13 58); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB I · Sachkompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>beschreiben</b>, was ein Budget ist, und <b>nennen</b> Einnahme- und Ausgabearten im privaten Haushalt.</p>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.62 0.13 58 / 0.16); color:oklch(0.62 0.13 58); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB II · Analyse- &amp; Methoden­kompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>erläutern</b>, wie man ein einfaches Budget aufstellt, und <b>analysieren</b> Beispielausgaben nach Prioritäten.</p>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.62 0.13 58 / 0.16); color:oklch(0.62 0.13 58); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB III · Urteils- &amp; Handlungs­kompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>beurteilen</b> Risiken von Ratenkäufen, <b>nehmen</b> zum eigenen Umgang mit Geld <b>Stellung</b> und <b>entwickeln</b> persönliche Spar- und Budgetregeln.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border:1.5px dashed #c9bfae; border-radius:14px; padding:20px 22px; margin-bottom:26px; background:#f6f2e9;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:#9a8f7d; margin-bottom:8px;">Leitgedanke · Bildimpuls (wird noch ergänzt)</div>
+        <p style="margin:0; font:400 14px/1.55 'Source Serif 4',Georgia,serif; color:#6f665a;"><b>Bildvorschlag:</b> Ein durchsichtiges Sparschwein: An einer Seite fließt Geld hinein (Taschengeld), an mehreren kleinen Löchern läuft es wieder heraus (Ausgaben).</p>
+      </div>
+
+      <h2 style="margin:0 0 14px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Ablauf der 20 Minuten</h2>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div class="avoid" style="display:flex; gap:16px; align-items:flex-start; border-left:4px solid oklch(0.62 0.13 58); background:#faf7f0; border-radius:0 11px 11px 0; padding:15px 18px;">
+          <div style="flex:0 0 auto; font:700 14px 'Schibsted Grotesk',sans-serif; color:oklch(0.62 0.13 58); min-width:64px;">0–10 Min</div>
+          <div>
+            <div style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:4px;">1 · Einstieg &amp; Begriffe klären</div>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Begriffe erarbeiten: <b>Einnahmen</b> → <b>Ausgaben</b> → <b>Budget</b> → <b>Sparen</b> → <b>Schulden</b>.</p>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:16px; align-items:flex-start; border-left:4px solid oklch(0.62 0.13 58); background:#faf7f0; border-radius:0 11px 11px 0; padding:15px 18px;">
+          <div style="flex:0 0 auto; font:700 14px 'Schibsted Grotesk',sans-serif; color:oklch(0.62 0.13 58); min-width:64px;">10–20 Min</div>
+          <div>
+            <div style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:4px;">2 · Bezug zu deinem Alltag</div>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Beispiel eigenes Taschengeld: Wo geht es meistens zuerst hin? Gemeinsam grob Kategorien sammeln (Süßigkeiten, Handy, Sparen, Freizeit).</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Begriffskasten</h2>
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; overflow:hidden; margin-bottom:26px;">
+        <div style="display:grid; grid-template-columns:170px 1fr;">
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Einnahmen</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Geld, das reinkommt – z. B. Taschengeld, Geldgeschenke, kleiner Nebenjob.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Ausgaben</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Geld, das rausgeht – für Dinge, die du kaufst oder bezahlst.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Budget</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Ein Plan, wie viel Geld für welchen Zweck zur Verfügung steht.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Sparen</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Geld zurücklegen, statt es sofort auszugeben.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Schulden</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Geld, das du jemandem schuldest, weil du mehr ausgegeben hast, als du hattest.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Ratenkauf</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Etwas kaufen und in mehreren kleinen Beträgen über Zeit bezahlen – oft mit Zusatzkosten.</div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:18px 20px; background:oklch(0.62 0.13 58 / 0.16); border:1px solid oklch(0.62 0.13 58 / 0.16); margin-bottom:28px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:7px;">Merksatz fürs Tafelbild</div>
+        <p style="margin:0; font:600 18px/1.45 'Bricolage Grotesque',sans-serif; color:#2a2030;">Wer sein Geld plant, wird nicht vom Geld überrascht.</p>
+      </div>
+
+      <div style="height:1px; background:#ece6da; margin:4px 0 22px;"></div>
+      <div style="display:inline-block; padding:5px 12px; border-radius:999px; background:#efe9dc; color:#6f665a; font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.06em; text-transform:uppercase; margin-bottom:12px;">Im Anschluss · nicht Teil der 20 Minuten</div>
+      <h2 style="margin:0 0 6px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Drei offene Fragen zum Weiterdenken</h2>
+      <p style="margin:0 0 16px; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#6f665a;">Überleitung in die Erarbeitungsphase: Die Fragen bleiben offen und werden anschließend mit dem Textmaterial M1–M4 bearbeitet.</p>
+      <div style="display:flex; flex-direction:column; gap:11px;">
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.62 0.13 58); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">1</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Warum ist es sinnvoll, Einnahmen und Ausgaben aufzuschreiben, obwohl das mühsam ist?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.62 0.13 58);">→ Bearbeitung mit Material M2</span>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.62 0.13 58); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">2</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Wie unterscheide ich zwischen „das brauche ich jetzt" und „das kann warten"?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.62 0.13 58);">→ Bearbeitung mit Material M3</span>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.62 0.13 58); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">3</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Warum werden aus kleinen Ratenkäufen manchmal große Schuldenprobleme?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.62 0.13 58);">→ Bearbeitung mit Material M4</span>
+          </div>
+        </div>
+      </div>
+
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.62 0.13 58); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M1</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">Textmaterial · Grundlagen</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Was ein Budget ist</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Ein <b>Budget</b> ist im Grunde nichts anderes als ein Plan: Wie viel Geld kommt rein (<b>Einnahmen</b>) und wie viel geht wofür raus (<b>Ausgaben</b>)? Das gilt für einen ganzen Haushalt genauso wie für dein eigenes Taschengeld. Die Grundregel ist einfach, aber entscheidend: Auf Dauer dürfen die Ausgaben nicht größer sein als die Einnahmen – sonst entstehen <b>Schulden</b>.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Ein Budget zu haben heißt nicht, jeden Cent zu kontrollieren oder auf alles zu verzichten. Es bedeutet, bewusst zu entscheiden, wofür das Geld verwendet wird – und dadurch später nicht überrascht zu sein, wenn es „plötzlich" alle ist.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Verbraucherzentrale (verbraucherzentrale.de), „Taschengeld &amp; Budget"; bpb.de, „Haushaltsführung einfach erklärt"; Bundesarbeitsgemeinschaft Schuldnerberatung (bag-sb.de).</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.62 0.13 58 / 0.16); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:10px;">Analyseauftrag M1</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre in eigenen Worten, was ein Budget ist.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Nenne zwei typische Einnahmequellen und zwei typische Ausgaben für Jugendliche.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Warum ist die Regel „Ausgaben ≤ Einnahmen" auf Dauer so wichtig?</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.62 0.13 58); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M2</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 1 · Überblick behalten</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Warum sich Aufschreiben lohnt</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Die meisten Menschen unterschätzen, wofür sie ihr Geld tatsächlich ausgeben – kleine Beträge wie ein Snack oder eine App-Erweiterung summieren sich unbemerkt. Wer seine Ausgaben eine Zeit lang aufschreibt (auch nur grob in drei bis vier Kategorien), bekommt ein realistisches Bild statt eines gefühlten.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Dieses Wissen ist die Grundlage für gute Entscheidungen: Erst wenn du weißt, wo dein Geld wirklich hinfließt, kannst du bewusst gegensteuern – zum Beispiel eine Kategorie reduzieren, um für etwas Größeres zu sparen. Ohne Überblick bleibt jede Sparabsicht ein vager Wunsch.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Verbraucherzentrale, „Haushaltsbuch führen"; Finanztip / Stiftung Warentest, Budgetplaner-Ratgeber (allgemein zugänglich); bpb.de, „Finanzielle Bildung Jugendlicher".</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.62 0.13 58 / 0.16); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:10px;">Analyseauftrag M2</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre, warum kleine, häufige Ausgaben oft unterschätzt werden.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Notiere für eine Woche (grob geschätzt), wofür du Geld ausgegeben hast, und sortiere es in Kategorien.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Was war für dich überraschend an deiner eigenen Ausgabenliste?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 1:</b> Warum ist es sinnvoll, Einnahmen und Ausgaben aufzuschreiben? Schreibe eine begründete Antwort (4–5 Sätze).</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.62 0.13 58); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M3</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 2 · Prioritäten setzen</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Jetzt kaufen oder warten?</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Nicht jede Ausgabe ist gleich dringend. Es hilft, Wünsche grob in drei Stufen einzuteilen: Dinge, die du wirklich brauchst (z. B. Schulmaterial), Dinge, die dir wichtig sind, aber warten können (z. B. ein bestimmtes Spiel), und spontane Lust-Käufe, die oft schnell wieder vergessen sind. Wer vor dem Kauf kurz einordnet, in welche Kategorie ein Wunsch fällt, trifft bewusstere Entscheidungen.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Eine bewährte Methode ist die „24-Stunden-Regel": Bei größeren Wünschen einen Tag warten, bevor man kauft. Oft zeigt sich danach, ob der Wunsch wirklich wichtig war oder nur ein kurzer Impuls.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Verbraucherzentrale, „Kaufentscheidungen bewusst treffen"; bpb.de, „Bedürfnisse und Konsum"; Finanztip, Ratgeber zu Spontankäufen (allgemein zugänglich).</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.62 0.13 58 / 0.16); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:10px;">Analyseauftrag M3</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Ordne drei eigene Wünsche in die Kategorien „brauche ich", „wichtig, kann warten", „spontane Lust" ein.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre die 24-Stunden-Regel und warum sie helfen könnte.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Beschreibe eine Situation, in der du zu schnell gekauft hast und es hinterher bereut hast (oder nicht).</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 2:</b> Wie unterscheidest du zwischen „brauche ich jetzt" und „kann warten"? Nimm begründet Stellung (5–6 Sätze).</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.62 0.13 58); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M4</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 3 · Schuldenfalle</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Wie aus kleinen Raten große Probleme werden</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Viele Online-Shops und Apps bieten heute an, sofort zu kaufen und erst später (oder in kleinen Raten) zu bezahlen – „Buy now, pay later". Das klingt bequem, verschleiert aber leicht, wie viel man tatsächlich ausgibt: Ein Betrag in vier kleinen Raten fühlt sich harmloser an als der volle Preis auf einmal, obwohl es dieselbe Summe ist – oft sogar mit Zinsen oder Gebühren.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Gefährlich wird es, wenn mehrere Ratenkäufe gleichzeitig laufen: Die einzelnen Raten wirken klein, in der Summe sprengen sie aber schnell das eigene Budget. Wer den Überblick verliert, gerät in eine Schuldenspirale – ein Zustand, aus dem professionelle Schuldnerberatungsstellen jährlich vielen jungen Menschen helfen müssen.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Bundesarbeitsgemeinschaft Schuldnerberatung (bag-sb.de); Verbraucherzentrale, „Ratenkauf &amp; Buy now, pay later – Risiken"; Landesarbeitsgemeinschaft Schuldnerberatung Hessen.</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.62 0.13 58 / 0.16); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:10px;">Analyseauftrag M4</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre, warum Ratenkäufe teurer wirken können, als sie auf den ersten Blick erscheinen.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Was passiert, wenn mehrere Ratenkäufe gleichzeitig laufen?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Wo könnte man sich Hilfe holen, wenn man in eine Schuldenfalle gerät?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 3:</b> Warum werden aus kleinen Ratenkäufen manchmal große Schuldenprobleme? Formuliere eine begründete Antwort.</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script></script>
+</body>
+</html>

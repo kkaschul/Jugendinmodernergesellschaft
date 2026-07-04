@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  .doc-frame{width:100%;border-collapse:collapse}
+  .doc-frame td{padding:0}
+  .hdr-space,.ftr-space{display:none}
+  .avoid{break-inside:avoid}
+  .pagebreak{break-before:page}
+  @page{size:A4;margin:0}
+  @media print{
+    html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .sheet{box-shadow:none!important;margin:0!important;border-radius:0!important;width:100%!important;min-height:auto!important}
+    .hdr-space,.ftr-space{display:table-cell;height:14mm}
+    h1,h2,h3,h4{break-after:avoid}
+    p,li{orphans:3;widows:3}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:820px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / als PDF speichern</button>
+  </div>
+
+  <div class="sheet" style="max-width:820px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:20px;">
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.63 0.17 33); color:#fff; font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.02em;">Themen-Input</span>
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:600 12px 'Schibsted Grotesk',sans-serif;">Themenfeld 7.1 · Jugend in der modernen Gesellschaft</span>
+        <span style="padding:4px 11px; border-radius:999px; background:#efe9dc; color:#6f665a; font:600 12px 'Schibsted Grotesk',sans-serif;">20-Minuten-Input</span>
+      </div>
+
+      <h1 style="margin:0 0 6px; font:700 33px/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#1f1a15;">Wer bin ich – und wer will ich sein?</h1>
+      <p style="margin:0 0 26px; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Wie finde ich heraus, wer ich wirklich bin, wenn online alle perfekt wirken? Ein Fachinput für Jahrgang 7 (Politik & Wirtschaft, Hessen).</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; padding:18px 20px; background:#faf7f0; margin-bottom:26px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:11px;">Lernziel · Kompetenzen &amp; Operatoren (Referenzrahmen Hessen)</div>
+        <p style="margin:0 0 13px; font:500 15.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;">Die Schülerinnen und Schüler …</p>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB I · Sachkompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>nennen</b> Merkmale der eigenen Identität und <b>unterscheiden</b> Selbstbild und Fremdbild.</p>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB II · Analyse- &amp; Methoden­kompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>erläutern</b> an eigenen Beispielen, wie Vorbilder und soziale Medien das Selbstbild beeinflussen, und <b>analysieren</b> typische Social-Media-Inhalte auf Inszenierung.</p>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB III · Urteils- &amp; Handlungs­kompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>beurteilen</b> den Einfluss von Likes und Followern auf den Selbstwert, <b>nehmen</b> dazu begründet <b>Stellung</b> und <b>entwickeln</b> eigene Strategien für ein stabiles Selbstbild.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border:1.5px dashed #c9bfae; border-radius:14px; padding:20px 22px; margin-bottom:26px; background:#f6f2e9;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:#9a8f7d; margin-bottom:8px;">Leitgedanke · Bildimpuls (wird noch ergänzt)</div>
+        <p style="margin:0; font:400 14px/1.55 'Source Serif 4',Georgia,serif; color:#6f665a;"><b>Bildvorschlag:</b> Ein Spiegel, der ein geglättetes/gefiltertes Gesicht zeigt statt des echten Spiegelbilds – Symbol für Selbstbild vs. Inszenierung im Netz.</p>
+      </div>
+
+      <h2 style="margin:0 0 14px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Ablauf der 20 Minuten</h2>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div class="avoid" style="display:flex; gap:16px; align-items:flex-start; border-left:4px solid oklch(0.63 0.17 33); background:#faf7f0; border-radius:0 11px 11px 0; padding:15px 18px;">
+          <div style="flex:0 0 auto; font:700 14px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33); min-width:64px;">0–10 Min</div>
+          <div>
+            <div style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:4px;">1 · Einstieg &amp; Begriffe klären</div>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Begriffe erarbeiten: <b>Identität</b> → <b>Selbstbild</b> → <b>Fremdbild</b> → <b>Vorbild</b> → <b>Selbstwertgefühl</b>. Kurz sammeln: Was macht „typisch ich" aus?</p>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:16px; align-items:flex-start; border-left:4px solid oklch(0.63 0.17 33); background:#faf7f0; border-radius:0 11px 11px 0; padding:15px 18px;">
+          <div style="flex:0 0 auto; font:700 14px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33); min-width:64px;">10–20 Min</div>
+          <div>
+            <div style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:4px;">2 · Bezug zu deinem Alltag</div>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">„Dein Feed zeigt nie die ganze Geschichte." An Beispielen aus Instagram/TikTok zeigen: Inszenierung, Filter, Auswahl der besten Momente. Frage: Vergleichst du dich mit echten Menschen – oder mit deren Highlight-Reel?</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Begriffskasten</h2>
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; overflow:hidden; margin-bottom:26px;">
+        <div style="display:grid; grid-template-columns:170px 1fr;">
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Identität</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Alles, was dich als Person ausmacht: Werte, Interessen, Aussehen, Herkunft, Beziehungen.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Selbstbild</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Wie du dich selbst siehst und einschätzt.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Fremdbild</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Wie andere dich sehen – das kann vom Selbstbild abweichen.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Vorbild</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Eine Person, an deren Werten oder Verhalten du dich orientierst.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Selbstwertgefühl</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Wie viel Wert du dir selbst beimisst – unabhängig von der Meinung anderer.</div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:18px 20px; background:oklch(0.63 0.17 33 / 0.14); border:1px solid oklch(0.63 0.17 33 / 0.14); margin-bottom:28px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:7px;">Merksatz fürs Tafelbild</div>
+        <p style="margin:0; font:600 18px/1.45 'Bricolage Grotesque',sans-serif; color:#2a2030;">Dein Selbstbild entsteht aus vielen Quellen – aber nur du entscheidest, welche davon wirklich zählen.</p>
+      </div>
+
+      <div style="height:1px; background:#ece6da; margin:4px 0 22px;"></div>
+      <div style="display:inline-block; padding:5px 12px; border-radius:999px; background:#efe9dc; color:#6f665a; font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.06em; text-transform:uppercase; margin-bottom:12px;">Im Anschluss · nicht Teil der 20 Minuten</div>
+      <h2 style="margin:0 0 6px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Drei offene Fragen zum Weiterdenken</h2>
+      <p style="margin:0 0 16px; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#6f665a;">Überleitung in die Erarbeitungsphase: Die Fragen bleiben offen und werden anschließend mit dem Textmaterial M1–M4 bearbeitet.</p>
+      <div style="display:flex; flex-direction:column; gap:11px;">
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.63 0.17 33); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">1</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Warum vergleichen wir uns ständig mit anderen – und wie beeinflusst das mein Selbstwertgefühl?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33);">→ Bearbeitung mit Material M2</span>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.63 0.17 33); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">2</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Was macht ein echtes Vorbild aus – und wie unterscheidet es sich von einem Idol im Netz?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33);">→ Bearbeitung mit Material M3</span>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.63 0.17 33); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">3</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Wie kann ich mein Selbstbild stärken, unabhängig von Likes und Kommentaren?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33);">→ Bearbeitung mit Material M4</span>
+          </div>
+        </div>
+      </div>
+
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M1</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">Textmaterial · Grundlagen</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Wer bin ich eigentlich?</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Identität ist alles, was dich ausmacht: deine Werte, Interessen, dein Aussehen, deine Herkunft, deine Beziehungen. Sie entsteht nicht an einem Tag, sondern wächst dein ganzes Leben lang – besonders stark in der Pubertät, wenn du beginnst, dich von Eltern und Kindheit abzugrenzen und eigene Antworten zu suchen.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Dabei helfen zwei Blickwinkel: das <b>Selbstbild</b> – wie du dich selbst siehst – und das <b>Fremdbild</b> – wie andere dich wahrnehmen. Beide stimmen selten hundertprozentig überein. Das ist normal und sogar hilfreich: Rückmeldungen von Freund:innen und Familie helfen dir, dich selbst besser kennenzulernen.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Deutsches Jugendinstitut (dji.de), Themenbereich Jugend &amp; Identität; bpb.de, Dossier „Jugend"; klicksafe.de, „Ich bin, was ich poste?".</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M1</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Notiere fünf Wörter, die dich beschreiben – nicht dein Aussehen, sondern Charakter und Interessen.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Frage eine Person, die dich gut kennt, wie sie dich beschreiben würde. Vergleiche mit deiner eigenen Liste.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre den Unterschied zwischen Selbstbild und Fremdbild in eigenen Worten.</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M2</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 1 · Vergleichen im Netz</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Die Vergleichsfalle</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Menschen vergleichen sich seit jeher mit anderen – das ist ein ganz normales Verhalten, mit dem wir einschätzen, wo wir stehen. Früher verglichst du dich mit Menschen in deiner Umgebung. Heute zeigt dir dein Feed stündlich Hunderte von Menschen, die scheinbar schöner, erfolgreicher oder lustiger leben als du.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Das Problem: Was du siehst, ist fast nie die ganze Wahrheit. Menschen posten die besten fünf Sekunden ihres Tages, nicht die anderen 23 Stunden 59 Minuten 55 Sekunden. Filter glätten Haut, bearbeiten Körper, verändern Farben. Wer sich mit diesem bearbeiteten Ausschnitt vergleicht, vergleicht sich mit etwas, das so gar nicht existiert.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Bundeszentrale für gesundheitliche Aufklärung (bzga.de), „Körperbild &amp; soziale Medien"; JIM-Studie (mpfs.de); klicksafe.de, „Selbstdarstellung im Netz".</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M2</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Beschreibe, warum ein Foto im Netz oft nicht die ganze Wahrheit zeigt.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Nenne zwei Tricks, mit denen Bilder „perfekter" gemacht werden.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Überlege: Wie oft vergleichst du dich selbst mit Menschen im Netz? Wie fühlst du dich danach?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 1:</b> Wie beeinflusst der Vergleich mit anderen dein Selbstwertgefühl? Schreibe eine begründete Antwort (4–5 Sätze).</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M3</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 2 · Vorbilder & Idole</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Vorbild oder Idol – was ist der Unterschied?</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Ein <b>Vorbild</b> ist eine Person, deren Werte oder Verhalten dich beeindrucken – zum Beispiel, weil sie mutig, hilfsbereit oder ehrlich ist. Ein Vorbild muss nicht berühmt sein: Es kann eine Trainerin, ein Großvater oder eine ältere Mitschülerin sein. Ein <b>Idol</b> dagegen wird oft wegen seines Erfolgs, Aussehens oder seiner Reichweite bewundert – ohne dass man die Person wirklich kennt.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Influencerinnen und Influencer sind oft Idole: Sie zeigen ein Leben, das perfekt inszeniert ist, verdienen aber häufig Geld mit genau dieser Inszenierung – auch mit Werbung, die nicht immer klar erkennbar ist. Das heißt nicht, dass man niemandem im Netz folgen darf. Es lohnt sich aber zu fragen: Bewundere ich diese Person wegen ihrer Werte – oder nur wegen ihres Bildes?</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">klicksafe.de, „Influencer &amp; Werbung erkennen"; bpb.de, „Idole und Vorbilder Jugendlicher"; Medienpädagogischer Forschungsverbund Südwest (mpfs.de).</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M3</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Nenne ein eigenes Vorbild und begründe, welche Werte dich an dieser Person beeindrucken.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre den Unterschied zwischen Vorbild und Idol mit eigenen Worten.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Woran erkennst du versteckte Werbung bei Influencer:innen?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 2:</b> Was macht ein echtes Vorbild aus? Nimm begründet Stellung (5–6 Sätze).</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M4</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 3 · Selbstwert stärken</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Selbstwert, der nicht von Likes abhängt</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Wenn dein gutes Gefühl nur von Likes und Kommentaren abhängt, wird es wackelig – denn du kannst nicht kontrollieren, wie andere reagieren. Ein stabiler Selbstwert speist sich stattdessen aus Dingen, die du selbst in der Hand hast: eigene Stärken kennen, Dinge tun, die dir wirklich Freude machen, echte Beziehungen pflegen.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Kleine, wirksame Gewohnheiten helfen dabei: dir bewusst machen, worin du gut bist – auch abseits von Schule und Aussehen; Zeit offline verbringen, ohne zu vergleichen; dir vor Augen führen, dass ein gepostetes Bild nur ein winziger Ausschnitt eines Lebens ist. Wenn Selbstzweifel überhandnehmen, ist es stark, sich Hilfe zu holen – bei Freund:innen, Familie oder Beratungsstellen.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">bzga.de, „Selbstwert stärken"; „Nummer gegen Kummer" (nummergegenkummer.de); Landesprogramm Hessen – Prävention &amp; Gesundheitsförderung an Schulen.</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M4</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Notiere drei Dinge, in denen du wirklich gut bist – ohne Bezug zu Likes oder Followern.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Beschreibe eine Aktivität, bei der du dich gut fühlst, ganz ohne dass sie gepostet wird.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Wo würdest du dir Hilfe holen, wenn dich Vergleiche im Netz belasten?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 3:</b> Wie kannst du dein Selbstbild stärken, unabhängig von Likes? Formuliere drei persönliche Regeln.</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script></script>
+</body>
+</html>

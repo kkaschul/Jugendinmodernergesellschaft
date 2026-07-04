@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  .doc-frame{width:100%;border-collapse:collapse}
+  .doc-frame td{padding:0}
+  .hdr-space,.ftr-space{display:none}
+  .avoid{break-inside:avoid}
+  .pagebreak{break-before:page}
+  @page{size:A4;margin:0}
+  @media print{
+    html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .sheet{box-shadow:none!important;margin:0!important;border-radius:0!important;width:100%!important;min-height:auto!important}
+    .hdr-space,.ftr-space{display:table-cell;height:14mm}
+    h1,h2,h3,h4{break-after:avoid}
+    p,li{orphans:3;widows:3}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:820px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / als PDF speichern</button>
+  </div>
+
+  <div class="sheet" style="max-width:820px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:20px;">
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.63 0.17 33); color:#fff; font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.02em;">Themen-Input</span>
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:600 12px 'Schibsted Grotesk',sans-serif;">Themenfeld 7.1 · Jugend in der modernen Gesellschaft</span>
+        <span style="padding:4px 11px; border-radius:999px; background:#efe9dc; color:#6f665a; font:600 12px 'Schibsted Grotesk',sans-serif;">20-Minuten-Input</span>
+      </div>
+
+      <h1 style="margin:0 0 6px; font:700 33px/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#1f1a15;">Streiten will gelernt sein</h1>
+      <p style="margin:0 0 26px; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Wie lösen wir einen Streit so, dass am Ende niemand verliert? Ein Fachinput für Jahrgang 7 (Politik & Wirtschaft, Hessen).</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; padding:18px 20px; background:#faf7f0; margin-bottom:26px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:11px;">Lernziel · Kompetenzen &amp; Operatoren (Referenzrahmen Hessen)</div>
+        <p style="margin:0 0 13px; font:500 15.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;">Die Schülerinnen und Schüler …</p>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB I · Sachkompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>beschreiben</b> den Unterschied zwischen Konflikt und Konsens und <b>nennen</b> Regeln für faires Streiten.</p>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB II · Analyse- &amp; Methoden­kompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>erläutern</b> das Prinzip des Kompromisses an einem Beispiel und <b>analysieren</b> einen Konflikt hinsichtlich der Interessen beider Seiten.</p>
+          </div>
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:128px; padding:5px 9px; border-radius:7px; background:oklch(0.63 0.17 33 / 0.14); color:oklch(0.63 0.17 33); font:700 11px/1.25 'Schibsted Grotesk',sans-serif; text-align:center;">AFB III · Urteils- &amp; Handlungs­kompetenz</span>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#352f28;"><b>beurteilen</b> Vor- und Nachteile unterschiedlicher Konfliktlösestrategien, <b>nehmen</b> dazu <b>Stellung</b> und <b>entwickeln</b> eigene Regeln für fairen Streit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border:1.5px dashed #c9bfae; border-radius:14px; padding:20px 22px; margin-bottom:26px; background:#f6f2e9;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:#9a8f7d; margin-bottom:8px;">Leitgedanke · Bildimpuls (wird noch ergänzt)</div>
+        <p style="margin:0; font:400 14px/1.55 'Source Serif 4',Georgia,serif; color:#6f665a;"><b>Bildvorschlag:</b> Zwei Figuren ziehen an entgegengesetzten Enden eines Seils; in der Mitte formt sich der Knoten zu einer Brücke, die beide verbindet.</p>
+      </div>
+
+      <h2 style="margin:0 0 14px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Ablauf der 20 Minuten</h2>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div class="avoid" style="display:flex; gap:16px; align-items:flex-start; border-left:4px solid oklch(0.63 0.17 33); background:#faf7f0; border-radius:0 11px 11px 0; padding:15px 18px;">
+          <div style="flex:0 0 auto; font:700 14px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33); min-width:64px;">0–10 Min</div>
+          <div>
+            <div style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:4px;">1 · Einstieg &amp; Begriffe klären</div>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Begriffe erarbeiten: <b>Konflikt</b> → <b>Konsens</b> → <b>Kompromiss</b> → <b>Mediation</b> → <b>Streitschlichtung</b>.</p>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:16px; align-items:flex-start; border-left:4px solid oklch(0.63 0.17 33); background:#faf7f0; border-radius:0 11px 11px 0; padding:15px 18px;">
+          <div style="flex:0 0 auto; font:700 14px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33); min-width:64px;">10–20 Min</div>
+          <div>
+            <div style="font:700 15px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:4px;">2 · Bezug zu deinem Alltag</div>
+            <p style="margin:0; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Alltagsbeispiel: Zwei wollen dieselbe Fernbedienung/denselben Sitzplatz. Gemeinsam Positionen („Ich will …") von Interessen („Mir ist wichtig, dass …") unterscheiden.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Begriffskasten</h2>
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; overflow:hidden; margin-bottom:26px;">
+        <div style="display:grid; grid-template-columns:170px 1fr;">
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Konflikt</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Ein Zusammenprall unterschiedlicher Interessen, Meinungen oder Bedürfnisse.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Konsens</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Eine Lösung, mit der wirklich alle Beteiligten einverstanden sind.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Kompromiss</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Eine Lösung, bei der beide Seiten etwas nachgeben, aber auch etwas gewinnen.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Mediation</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Eine neutrale Person hilft zwei Streitenden, selbst eine Lösung zu finden.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Streitschlichtung</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Ausgebildete Mitschüler:innen helfen bei Konflikten in der Schule zu vermitteln.</div>
+          <div style="padding:11px 16px; background:#f3eee3; font:700 14px 'Schibsted Grotesk',sans-serif; color:#1f1a15; border-bottom:1px solid #ece6da;">Ich-Botschaft</div>
+          <div style="padding:11px 16px; font:400 14px/1.45 'Source Serif 4',Georgia,serif; color:#433d35; border-bottom:1px solid #ece6da;">Einen Konflikt aus der eigenen Perspektive schildern, statt Vorwürfe zu machen.</div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:18px 20px; background:oklch(0.63 0.17 33 / 0.14); border:1px solid oklch(0.63 0.17 33 / 0.14); margin-bottom:28px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:7px;">Merksatz fürs Tafelbild</div>
+        <p style="margin:0; font:600 18px/1.45 'Bricolage Grotesque',sans-serif; color:#2a2030;">Ein guter Kompromiss lässt beide Seiten ein Stück gewinnen.</p>
+      </div>
+
+      <div style="height:1px; background:#ece6da; margin:4px 0 22px;"></div>
+      <div style="display:inline-block; padding:5px 12px; border-radius:999px; background:#efe9dc; color:#6f665a; font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.06em; text-transform:uppercase; margin-bottom:12px;">Im Anschluss · nicht Teil der 20 Minuten</div>
+      <h2 style="margin:0 0 6px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Drei offene Fragen zum Weiterdenken</h2>
+      <p style="margin:0 0 16px; font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#6f665a;">Überleitung in die Erarbeitungsphase: Die Fragen bleiben offen und werden anschließend mit dem Textmaterial M1–M4 bearbeitet.</p>
+      <div style="display:flex; flex-direction:column; gap:11px;">
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.63 0.17 33); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">1</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Warum eskalieren Streits oft, obwohl beide eigentlich Ähnliches wollen?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33);">→ Bearbeitung mit Material M2</span>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.63 0.17 33); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">2</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Was unterscheidet einen echten Kompromiss von einer Lösung, bei der eine Seite verliert?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33);">→ Bearbeitung mit Material M3</span>
+          </div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; align-items:flex-start; padding:15px 17px; border:1px solid #e8e2d6; border-radius:11px; background:#fffdf8;">
+          <span style="flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:oklch(0.63 0.17 33); color:#fff; font:700 15px 'Bricolage Grotesque',sans-serif; display:flex; align-items:center; justify-content:center;">3</span>
+          <div>
+            <p style="margin:0 0 3px; font:600 15.5px/1.4 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Wie kann Streitschlichtung helfen, wenn zwei allein nicht weiterkommen?</p>
+            <span style="font:500 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.63 0.17 33);">→ Bearbeitung mit Material M4</span>
+          </div>
+        </div>
+      </div>
+
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M1</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">Textmaterial · Grundlagen</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Konflikt gehört dazu</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Ein <b>Konflikt</b> entsteht, wenn Interessen, Meinungen oder Bedürfnisse aufeinanderprallen. Das ist zunächst nichts Schlechtes – Konflikte gehören zu jedem Zusammenleben, ob in der Familie, unter Freund:innen oder in der Klasse. Entscheidend ist nicht, ob ein Konflikt entsteht, sondern wie damit umgegangen wird.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Am Ende eines gelösten Konflikts steht im Idealfall ein <b>Konsens</b> – eine Lösung, mit der wirklich alle einverstanden sind. Das gelingt nicht immer; oft braucht es einen <b>Kompromiss</b>, bei dem beide Seiten etwas nachgeben. Schlecht gelöste Konflikte enden dagegen oft damit, dass eine Seite „gewinnt" und die andere sich übergangen fühlt – was den nächsten Streit vorbereitet.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">bpb.de, „Konflikte verstehen und lösen"; Bertelsmann Stiftung, Materialien zu Konfliktkompetenz; Bundesministerium für Familie (bmfsfj.de).</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M1</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre den Unterschied zwischen Konsens und Kompromiss.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Warum sind Konflikte an sich nichts Schlechtes?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Beschreibe (ohne Namen) einen Streit, der gut gelöst wurde – was hat dabei geholfen?</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M2</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 1 · Positionen und Interessen</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Warum Streit oft eskaliert, obwohl beide dasselbe wollen</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Ein klassisches Beispiel: Zwei Personen streiten sich um die letzte Orange. Beide bestehen auf ihrer <b>Position</b> („Ich will die Orange!"). Fragt man nach dem <b>Interesse</b> dahinter, zeigt sich manchmal: Die eine Person will nur die Schale zum Backen, die andere nur das Fruchtfleisch zum Essen – beide könnten die Orange bekommen. Streit eskaliert oft, weil Menschen bei ihrer Position bleiben, statt über ihr eigentliches Interesse zu sprechen.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Wer im Streit nur die Forderung des anderen hört („Ich will Recht haben"), übersieht leicht, dass beide Seiten oft ein ähnliches Grundinteresse haben: gehört werden, fair behandelt werden, ihre Ruhe haben. Wer diese Interessen offenlegt, findet leichter eine Lösung, die für beide funktioniert.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Harvard-Verhandlungsmodell (Grundprinzipien, allgemein zugängliche Fachliteratur zur Konfliktlösung); bpb.de, „Interessen statt Positionen"; Bertelsmann Stiftung, Konfliktkompetenz-Materialien.</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M2</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre den Unterschied zwischen Position und Interesse am Orangen-Beispiel.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Finde ein eigenes Beispiel, bei dem hinter einem Streit ein gemeinsames Interesse steckt.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Warum hilft es, im Streit nach dem „Warum" zu fragen statt nur nach dem „Was"?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 1:</b> Warum eskalieren Streits oft, obwohl beide eigentlich Ähnliches wollen? Schreibe eine begründete Antwort (4–5 Sätze).</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M3</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 2 · Fairer Kompromiss</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Ein Kompromiss ist kein Verlieren</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Ein echter Kompromiss unterscheidet sich von einer Lösung, bei der eine Seite gewinnt und die andere verliert: Bei einem Kompromiss geben beide etwas ab, gewinnen aber auch etwas dazu. Beispiel: Wenn zwei Geschwister sich um die Fernbedienung streiten, könnte ein Kompromiss lauten, dass jede:r an einem Tag der Woche entscheidet – statt dass eine Person immer bestimmt.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Wichtig für einen fairen Kompromiss sind <b>Ich-Botschaften</b> statt Vorwürfe („Mir ist wichtig, dass …" statt „Du machst immer …"), echtes Zuhören, ohne sofort zu widersprechen, und die Bereitschaft, den Streit nicht ums Recht-haben zu führen, sondern um eine Lösung, mit der beide leben können.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">bpb.de, „Kompromisse aushandeln"; Bundeszentrale für gesundheitliche Aufklärung (bzga.de), Kommunikationstipps; Landesprogramm Hessen zur Sozialkompetenzförderung.</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M3</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre den Unterschied zwischen einem Kompromiss und einer Gewinner-Verlierer-Lösung.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Formuliere ein eigenes Beispiel für einen fairen Kompromiss aus deinem Alltag.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Was ist eine Ich-Botschaft? Formuliere eine für eine eigene Streitsituation.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 2:</b> Was unterscheidet einen echten Kompromiss von einer Lösung, bei der eine Seite verliert? Nimm begründet Stellung (5–6 Sätze).</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+  <div class="sheet pagebreak" style="max-width:820px; margin:22px auto 0; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="padding:4px 12px; border-radius:8px; background:oklch(0.63 0.17 33); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">M4</span>
+        <span style="font:700 13px 'Schibsted Grotesk',sans-serif; letter-spacing:.04em; text-transform:uppercase; color:#9a8f7d;">zu Frage 3 · Streitschlichtung</span>
+      </div>
+      <h2 style="margin:0 0 16px; font:700 26px/1.12 'Bricolage Grotesque',sans-serif; color:#1f1a15; letter-spacing:-.01em;">Wenn eine dritte Person hilft</h2>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">Manchmal kommen zwei Streitende allein nicht weiter – die Emotionen sind zu aufgeladen, oder es fehlt Vertrauen. Hier hilft <b>Mediation</b>: Eine neutrale, unparteiische Person moderiert das Gespräch, hört beide Seiten an und hilft ihnen, selbst eine Lösung zu finden. Die Mediatorin oder der Mediator entscheidet dabei nicht selbst, sondern unterstützt den Prozess.</p>
+      <p style="margin:0 0 13px; font:400 15.5px/1.62 'Source Serif 4',Georgia,serif; color:#312b24;">An vielen hessischen Schulen gibt es ausgebildete <b>Streitschlichter:innen</b> – meist ältere Schüler:innen, die dieses Vorgehen gelernt haben. Sie helfen bei Konflikten in der Pause oder im Schulalltag, bevor daraus etwas Größeres wird. Streitschlichtung in Anspruch zu nehmen ist kein Zeichen von Schwäche, sondern eine kluge Art, einen festgefahrenen Streit zu lösen.</p>
+      <div class="avoid" style="border-left:4px solid #c9b8df; background:#f7f3fb; border-radius:0 10px 10px 0; padding:13px 16px; margin-bottom:18px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.42 0.14 300); margin-bottom:6px;">Quellen</div>
+        <p style="margin:0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Hessisches Kultusministerium, Programme zur Streitschlichtung an Schulen; Deutsche Gesellschaft für Mediation (dgm-web.de); bpb.de, „Mediation in der Schule".</p>
+      </div>
+      <div class="avoid" style="border:1.5px solid oklch(0.63 0.17 33 / 0.14); border-radius:12px; padding:16px 18px; background:#fffdf8;">
+        <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.63 0.17 33); margin-bottom:10px;">Analyseauftrag M4</div>
+        <ol style="margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px;">
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Erkläre, was eine Mediatorin oder ein Mediator tut – und was nicht.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Gibt es an deiner Schule Streitschlichter:innen? Beschreibe (recherchiere ggf.), wie das Angebot funktioniert.</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;">Warum ist es kein Zeichen von Schwäche, Hilfe bei einem Streit anzunehmen?</li>
+          <li style="font:400 14.5px/1.5 'Source Serif 4',Georgia,serif; color:#312b24;"><b>Antwort auf Frage 3:</b> Wie kann Streitschlichtung helfen, wenn zwei allein nicht weiterkommen? Formuliere eine begründete Antwort.</li>
+        </ol>
+      </div>
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script></script>
+</body>
+</html>
