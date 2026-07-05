@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  .page{width:794px;min-height:1123px;background:#fff;margin:0 auto 26px;padding:44px 50px 54px;box-shadow:0 12px 30px rgba(20,40,30,.14);position:relative;}
+  .lines{background-image:repeating-linear-gradient(transparent,transparent 30px,#dbe3e0 30px,#dbe3e0 31px);}
+  .ft{position:absolute;bottom:22px;left:50px;right:50px;display:flex;justify-content:space-between;font-size:11px;color:#9fb0b8;border-top:1px solid #e6ecee;padding-top:8px;}
+  @media print{
+    body{background:#fff !important;}
+    .screen-bg{background:#fff !important;padding:0 !important;}
+    .page{box-shadow:none;margin:0;page-break-after:always;width:100%;min-height:auto;padding:34px 30px;}
+    .noprint{display:none !important;}
+  }
+  @page{size:A4;margin:0;}
+  [contenteditable="true"]:hover{background:rgba(63,107,160,.05);}
+  [contenteditable="true"]:focus{background:rgba(63,107,160,.08);outline:1.5px dashed #9fb2c2;}
+</style>
+</helmet>
+<div class="screen-bg" style="background:linear-gradient(168deg,#cfe7ef,#e9f3ee);font-family:'Nunito Sans',sans-serif;color:#23323a;padding:34px 0 60px;">
+
+  <div class="noprint" style="max-width:794px;margin:0 auto 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#fff;border-radius:12px;padding:13px 18px;box-shadow:0 6px 16px rgba(20,40,30,.1);">
+    <a href="Themen-Pinnwand.dc.html" style="text-decoration:none;font-size:13px;color:#3f6ba0;font-weight:700;display:inline-flex;align-items:center;gap:6px;">← Zurück zur Pinnwand</a>
+    <span style="font-size:13px;color:#5b6f7a;">7 Seiten &middot; direkt am Bildschirm ausf&uuml;llbar (Felder wachsen mit) &middot; oder ausdrucken &amp; von Hand schreiben</span>
+    <button type="button" onclick="window.print()" style="background:#3f6ba0;color:#fff;border:none;border-radius:9px;padding:9px 18px;font-family:'Poppins',sans-serif;font-weight:600;font-size:13.5px;cursor:pointer;">Drucken / als PDF speichern</button>
+  </div>
+
+  <!-- ===== SEITE 1 - FINDUNG: INPUTS & KI ===== -->
+  <div class="page" data-screen-label="Seite 1 - Findung: Inputs &amp; KI">
+    <div style="display:flex;align-items:center;gap:14px;border-bottom:3px solid #3f6ba0;padding-bottom:13px;margin-bottom:16px;">
+      <div style="width:50px;height:50px;border-radius:13px;flex:0 0 50px;background:linear-gradient(150deg,#33518a,#3f6ba0);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:#fff;">KI</div>
+      <div>
+        <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:25px;color:#1f3a52;line-height:1.1;">Mein Prozess-Logbuch</div>
+        <div style="font-size:12.5px;color:#6a7c86;margin-top:3px;">Dein Lernweg durch alle Projektphasen &ndash; Schritt f&uuml;r Schritt dokumentiert.</div>
+      </div>
+    </div>
+
+    <div style="background:#eef4f9;border-radius:10px;padding:10px 15px;margin-bottom:16px;font-size:12px;color:#46606e;line-height:1.45;"><b style="color:#2f4f80;">So f&uuml;hrst du dein Logbuch:</b> Trage nach jeder Sitzung kurz ein, was du getan, genutzt und gelernt hast. Das Logbuch begleitet dich durch alle Phasen und ist die Grundlage f&uuml;r deine Verteidigung und Note.</div>
+
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#2f7a52,#3a875a);border-radius:11px;padding:10px 15px;margin-bottom:18px;">
+      <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;">1</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">PHASE 1 &middot; FINDUNG</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Inputs besuchen, recherchieren &amp; KI gezielt einsetzen</div></div>
+    </div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15.5px;color:#23323a;margin-bottom:4px;">Besuchte Inputs &amp; Recherche</div>
+    <div style="font-size:12px;color:#7c8a92;margin-bottom:11px;">Welche Inputs, Lernorte oder Quellen hast du besucht &ndash; und was hast du mitgenommen?</div>
+    <div style="border:1px solid #d2dee2;border-radius:10px;overflow:hidden;margin-bottom:24px;">
+      <div style="display:flex;background:#2f8a9a;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:0 0 74px;padding:8px 9px;border-right:1px solid rgba(255,255,255,.25);">Datum</div>
+        <div style="flex:1.3;padding:8px 9px;border-right:1px solid rgba(255,255,255,.25);">Input / Quelle / Lernort</div>
+        <div style="flex:1.4;padding:8px 9px;border-right:1px solid rgba(255,255,255,.25);">Was habe ich mitgenommen?</div>
+        <div style="flex:1.2;padding:8px 9px;">Wie verwendet?</div>
+      </div>
+      <sc-for list="{{ rows5 }}" as="r" hint-placeholder-count="5">
+        <div style="display:flex;border-top:1px solid #e0e8ea;height:50px;">
+          <div style="flex:0 0 74px;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1.3;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1.4;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1.2;"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15.5px;color:#23323a;margin-bottom:4px;">KI-Einsatz &amp; Prompt-Log</div>
+    <div style="font-size:12px;color:#7c8a92;margin-bottom:11px;">Halte jede KI-Nutzung fest &ndash; und wie du das Ergebnis <b>gepr&uuml;ft</b> und weiterverwendet hast.</div>
+    <div style="border:1px solid #d2dee2;border-radius:10px;overflow:hidden;">
+      <div style="display:flex;background:#46708f;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:0 0 66px;padding:8px 9px;border-right:1px solid rgba(255,255,255,.25);">Datum</div>
+        <div style="flex:0 0 86px;padding:8px 9px;border-right:1px solid rgba(255,255,255,.25);">Tool</div>
+        <div style="flex:1.5;padding:8px 9px;border-right:1px solid rgba(255,255,255,.25);">Prompt (Screenshot)</div>
+        <div style="flex:1.6;padding:8px 9px;">Ergebnis gepr&uuml;ft? Wie verwendet?</div>
+      </div>
+      <sc-for list="{{ rows5 }}" as="r" hint-placeholder-count="5">
+        <div style="display:flex;border-top:1px solid #e0e8ea;height:52px;">
+          <div style="flex:0 0 66px;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:0 0 86px;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1.5;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1.6;"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 1 / 7</span></div>
+  </div>
+
+  <!-- ===== SEITE 2 - CHECKPOINT 1 ===== -->
+  <div class="page" data-screen-label="Seite 2 - Checkpoint 1">
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#1f6b4b,#2c7d53);border-radius:11px;padding:11px 16px;margin-bottom:18px;">
+      <span style="width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;">&rarr;</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">CHECKPOINT 1 &middot; LEISTUNGSNACHWEIS</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Abschluss der Findung &ndash; einzeln ausweisen, Note erhalten, dann weiter</div></div>
+    </div>
+
+    <div style="background:#f0f7f3;border:1px solid #cfe4d7;border-radius:12px;padding:15px 17px;margin-bottom:16px;">
+      <div style="font-size:12px;color:#1f6b4b;font-weight:700;margin-bottom:10px;">Mein gew&auml;hltes Pr&uuml;fungsformat (ankreuzen):</div>
+      <div style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:17px;">
+        <sc-for list="{{ formate }}" as="f" hint-placeholder-count="6">
+          <span style="display:flex;align-items:center;gap:7px;background:#fff;border:1px solid #cfe0d6;border-radius:8px;padding:6px 11px;font-size:12px;color:#3a5c46;font-weight:600;"><span style="width:14px;height:14px;border-radius:4px;border:2px solid #7faa90;flex:0 0 14px;"></span>{{ f }}</span>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:18px;">
+        <div style="flex:0 0 140px;"><div style="font-size:11.5px;color:#5a7563;font-weight:700;margin-bottom:9px;">Datum</div><div style="border-bottom:1.5px solid #bcd2c4;"></div></div>
+        <div style="flex:1;"><div style="font-size:11.5px;color:#5a7563;font-weight:700;margin-bottom:9px;">Womit konkret? (Titel meines Lernprodukts)</div><div style="border-bottom:1.5px solid #bcd2c4;"></div></div>
+        <div style="flex:0 0 110px;text-align:center;border:2px solid #cfe4d7;border-radius:11px;padding:8px;"><div style="font-size:10.5px;color:#5a7563;font-weight:700;margin-bottom:4px;">Note</div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:30px;color:#bcd2c4;">__</div></div>
+      </div>
+    </div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#1f4030;margin-bottom:4px;">Kurze Auswertung &ndash; welche fachlichen Lernziele weise ich nach?</div>
+    <div style="font-size:11.5px;color:#7c8a92;margin-bottom:13px;">Trage deine fachlichen Lernziele ein und benenne, woran man im Checkpoint-Produkt erkennt, dass du sie erreicht hast.</div>
+    <div style="border:1px solid #d2e0d6;border-radius:10px;overflow:hidden;">
+      <div style="display:flex;background:#1f6b4b;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:0 0 38px;padding:9px 7px;border-right:1px solid rgba(255,255,255,.25);text-align:center;">Nr.</div>
+        <div style="flex:1.3;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">Fachliches Lernziel</div>
+        <div style="flex:1.6;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">Woran sichtbar? (Indikator)</div>
+        <div style="flex:0 0 88px;padding:9px 10px;text-align:center;">Niveau 1&ndash;4</div>
+      </div>
+      <sc-for list="{{ rows4 }}" as="z" hint-placeholder-count="4">
+        <div style="display:flex;border-top:1px solid #e3ece5;min-height:60px;align-items:stretch;">
+          <div style="flex:0 0 38px;border-right:1px solid #e3ece5;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;color:#9ab8a6;font-size:13px;">{{ z }}</div>
+          <div style="flex:1.3;border-right:1px solid #e3ece5;"></div>
+          <div style="flex:1.6;border-right:1px solid #e3ece5;"></div>
+          <div style="flex:0 0 88px;display:flex;align-items:center;justify-content:center;gap:5px;">
+            <sc-for list="{{ levels }}" as="l" hint-placeholder-count="4">
+              <span style="width:18px;height:18px;border-radius:50%;border:1.5px solid #b3ccbb;color:#6a8a76;font-size:10px;display:flex;align-items:center;justify-content:center;">{{ l }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:14px;display:flex;align-items:flex-start;gap:9px;background:#eef4f9;border-radius:10px;padding:11px 14px;font-size:11.5px;color:#46606e;line-height:1.45;"><span style="font-size:14px;">&#128206;</span><span>Ergebnis und Auswertung bringst du mit in die Verteidigung &ndash; sie zeigen, was du fachlich schon nachweisen kannst.</span></div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 2 / 7</span></div>
+  </div>
+
+  <!-- ===== SEITE 3 - KLAERUNG (1/2) ===== -->
+  <div class="page" data-screen-label="Seite 3 - Klaerung (1/2)">
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#3a875a,#479460);border-radius:11px;padding:11px 16px;margin-bottom:18px;">
+      <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;">2</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">PHASE 2 &middot; KL&Auml;RUNG</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Projekt &amp; Ziel sch&auml;rfen &middot; jetzt steht fest, was wir machen</div></div>
+    </div>
+
+    <div style="border:1px solid #d2dee2;border-radius:12px;padding:14px 17px;margin-bottom:14px;">
+      <div style="font-size:13px;color:#2f4f80;font-weight:700;margin-bottom:12px;">&#128221; Kurze Projektbeschreibung</div>
+      <div style="display:flex;flex-direction:column;gap:11px;">
+        <div><div style="font-size:11.5px;color:#46708f;font-weight:700;margin-bottom:4px;">Das machen wir:</div><div class="lines" style="height:34px;border-bottom:1px solid #d6dee0;"></div></div>
+        <div><div style="font-size:11.5px;color:#46708f;font-weight:700;margin-bottom:4px;">F&uuml;r diese Zielgruppe / f&uuml;r wen:</div><div class="lines" style="height:34px;border-bottom:1px solid #d6dee0;"></div></div>
+        <div><div style="font-size:11.5px;color:#46708f;font-weight:700;margin-bottom:4px;">Das wollen wir damit erreichen:</div><div class="lines" style="height:34px;border-bottom:1px solid #d6dee0;"></div></div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:14px;margin-bottom:16px;">
+      <div style="flex:1;background:#f3f8f2;border:1px solid #d6e6d8;border-radius:12px;padding:13px 15px;">
+        <div style="font-size:12px;color:#3a5c46;font-weight:700;margin-bottom:4px;">&#128218; Fachschwerpunkt &amp; erste Ideen</div>
+        <div class="lines" style="height:48px;border-bottom:1px solid #cfdccf;margin-top:6px;"></div>
+      </div>
+      <div style="flex:1;background:#f3f8f2;border:1px solid #d6e6d8;border-radius:12px;padding:13px 15px;">
+        <div style="font-size:12px;color:#3a5c46;font-weight:700;margin-bottom:4px;">&#127757; Nachhaltigkeitsziel (SDG) &ndash; warum?</div>
+        <div class="lines" style="height:48px;border-bottom:1px solid #cfdccf;margin-top:6px;"></div>
+      </div>
+    </div>
+
+    <div style="font-size:13px;color:#2f4f80;font-weight:700;margin-bottom:4px;">&#127919; Meine 2&ndash;3 pers&ouml;nlichen Lernziele f&uuml;r dieses Projekt</div>
+    <div style="font-size:11.5px;color:#7c8a92;margin-bottom:12px;">Was m&ouml;chte ich besser k&ouml;nnen? (z.&nbsp;B. &bdquo;KI kritisch nutzen&ldquo;, &bdquo;im Team Verantwortung &uuml;bernehmen&ldquo;)</div>
+    <div style="display:flex;flex-direction:column;gap:13px;">
+      <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#eef4f9;color:#3f6ba0;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;">1</span><div style="flex:1;border-bottom:1.5px solid #c3cfd4;height:28px;"></div></div>
+      <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#eef4f9;color:#3f6ba0;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;">2</span><div style="flex:1;border-bottom:1.5px solid #c3cfd4;height:28px;"></div></div>
+      <div style="display:flex;gap:11px;align-items:flex-start;"><span style="flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#eef4f9;color:#3f6ba0;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;">3</span><div style="flex:1;border-bottom:1.5px solid #c3cfd4;height:28px;"></div></div>
+    </div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 3 / 7</span></div>
+  </div>
+
+  <!-- ===== SEITE 4 - KLAERUNG (2/2) ===== -->
+  <div class="page" data-screen-label="Seite 4 - Klaerung (2/2)">
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#3a875a,#479460);border-radius:11px;padding:11px 16px;margin-bottom:18px;">
+      <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;">2</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">PHASE 2 &middot; KL&Auml;RUNG</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Problem &amp; Ziel formulieren, Ressourcen kl&auml;ren, Projektauftrag</div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px;">
+      <div style="display:flex;gap:16px;">
+        <div style="flex:1;"><div style="font-size:12px;color:#2f5c44;font-weight:700;margin-bottom:6px;">&#10102; Unser Problem / Handlungssituation</div><div class="lines" style="height:62px;border-bottom:1px solid #d6dee0;"></div></div>
+        <div style="flex:1;"><div style="font-size:12px;color:#2f5c44;font-weight:700;margin-bottom:6px;">&#10103; Unser Ziel</div><div class="lines" style="height:62px;border-bottom:1px solid #d6dee0;"></div></div>
+      </div>
+      <div style="display:flex;gap:16px;">
+        <div style="flex:1;"><div style="font-size:12px;color:#2f5c44;font-weight:700;margin-bottom:6px;">&#10104; Ressourcen (Material, Zeit, Personen)</div><div class="lines" style="height:62px;border-bottom:1px solid #d6dee0;"></div></div>
+        <div style="flex:1;"><div style="font-size:12px;color:#2f5c44;font-weight:700;margin-bottom:6px;">&#10105; Mein Beitrag zum Projektauftrag</div><div class="lines" style="height:62px;border-bottom:1px solid #d6dee0;"></div></div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;"><span style="font-size:17px;">&#129302;</span><span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#23323a;">KI als Mentor &amp; Feedback-Partner</span></div>
+    <div style="background:#f4f0fa;border:1px solid #e0d6ee;border-radius:11px;padding:13px 16px;margin-bottom:14px;">
+      <div style="font-size:11.5px;color:#6a519a;font-weight:700;margin-bottom:10px;">Prompt-Ideen zum Ausprobieren &ndash; halte deine Nutzung im Prompt-Log fest:</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;">
+        <sc-for list="{{ mentorIdeas }}" as="m" hint-placeholder-count="5">
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:#4a4060;line-height:1.4;"><span style="flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#7a5aa0;margin-top:5px;"></span><span style="text-wrap:pretty;"><b>{{ m.label }}:</b> {{ m.text }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#4a5560;font-weight:700;margin-bottom:7px;">Wobei hat mir KI als Mentor geholfen &ndash; und was habe ich selbst entschieden?</div>
+    <div class="lines" style="height:80px;border-bottom:1px solid #d6dee0;margin-bottom:16px;"></div>
+
+    <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;"><span style="font-size:17px;">&#128172;</span><span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#23323a;">Recherche &amp; Experten-Interview</span></div>
+    <div style="font-size:11px;color:#7c8a92;margin-bottom:12px;">Details erarbeitet ihr im 4-Tage-Fahrplan <b>&bdquo;Vertiefung: Recherche &amp; Experten-Interview&ldquo;</b> (siehe Pinnwand) &ndash; hier tragt ihr die Ergebnisse ein, damit der ganze Prozess im Logbuch steht.</div>
+
+    <div style="font-size:11.5px;color:#2f4f80;font-weight:700;margin-bottom:6px;">Recherche-Belege aus dem Dossier (M1&ndash;M4)</div>
+    <div style="border:1px solid #cddcea;border-radius:10px;overflow:hidden;margin-bottom:14px;">
+      <div style="display:flex;background:#46708f;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5px;">
+        <div style="flex:1.2;padding:7px 9px;border-right:1px solid rgba(255,255,255,.25);">Unterfrage</div>
+        <div style="flex:1.6;padding:7px 9px;border-right:1px solid rgba(255,255,255,.25);">Kernaussage (eigene Worte)</div>
+        <div style="flex:1;padding:7px 9px;">Quelle</div>
+      </div>
+      <sc-for list="{{ rows3 }}" as="r" hint-placeholder-count="3">
+        <div style="display:flex;border-top:1px solid #e0e8ea;height:36px;">
+          <div style="flex:1.2;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1.6;border-right:1px solid #e0e8ea;"></div>
+          <div style="flex:1;"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;gap:16px;margin-bottom:14px;">
+      <div style="flex:1;"><div style="font-size:11.5px;color:#2f4f80;font-weight:700;margin-bottom:6px;">Interviewpartner:in</div><div style="border-bottom:1px dotted #cddcea;height:20px;"></div></div>
+      <div style="flex:1;"><div style="font-size:11.5px;color:#2f4f80;font-weight:700;margin-bottom:6px;">Datum des Interviews</div><div style="border-bottom:1px dotted #cddcea;height:20px;"></div></div>
+    </div>
+
+    <div style="font-size:11.5px;color:#2f4f80;font-weight:700;margin-bottom:6px;">Auswertung: Abgleich Recherche &amp; Interview</div>
+    <div style="border:1px solid #cddcea;border-radius:10px;overflow:hidden;margin-bottom:14px;">
+      <div style="display:flex;background:#3f6ba0;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:10.5px;">
+        <div style="flex:1;padding:7px 9px;border-right:1px solid rgba(255,255,255,.25);">Bestätigt</div>
+        <div style="flex:1;padding:7px 9px;border-right:1px solid rgba(255,255,255,.25);">Widerspricht / überrascht</div>
+        <div style="flex:1;padding:7px 9px;">Ganz neu dazugekommen</div>
+      </div>
+      <div style="display:flex;border-top:1px solid #e0e8ea;height:52px;">
+        <div style="flex:1;border-right:1px solid #e0e8ea;"></div>
+        <div style="flex:1;border-right:1px solid #e0e8ea;"></div>
+        <div style="flex:1;"></div>
+      </div>
+    </div>
+
+    <div style="font-size:11.5px;color:#2f4f80;font-weight:700;margin-bottom:6px;">Unsere wichtigste Erkenntnis (Blitzlicht-Satz)</div>
+    <div class="lines" style="height:24px;border-bottom:1px solid #d6dee0;margin-bottom:22px;"></div>
+
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#1f6b4b,#2c7d53);border-radius:11px;padding:11px 16px;">
+      <span style="width:30px;height:30px;border-radius:9px;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;">&rarr;</span>
+      <div style="flex:1;"><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;color:#fff;letter-spacing:.02em;">CHECKPOINT 2 &middot; STARTFREIGABE</div><div style="font-size:10.5px;color:rgba(255,255,255,.85);">Direkt nach dem Pitch &ndash; hier wird das &bdquo;Okay&ldquo; gegeben, dass das Projekt starten darf</div></div>
+      <div style="display:flex;gap:10px;align-items:flex-end;">
+        <div style="flex:0 0 96px;"><div style="font-size:10px;color:rgba(255,255,255,.8);font-weight:700;margin-bottom:18px;">Datum</div><div style="border-bottom:1.5px solid rgba(255,255,255,.5);"></div></div>
+        <div style="flex:0 0 72px;text-align:center;background:rgba(255,255,255,.15);border-radius:9px;padding:6px;"><div style="font-size:9.5px;color:rgba(255,255,255,.85);font-weight:700;margin-bottom:2px;">Note</div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:rgba(255,255,255,.6);">__</div></div>
+      </div>
+    </div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 4 / 7</span></div>
+  </div>
+
+  <!-- ===== SEITE 5 - PLANUNG ===== -->
+  <div class="page" data-screen-label="Seite 5 - Planung">
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#479460,#57a062);border-radius:11px;padding:11px 16px;margin-bottom:18px;">
+      <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;">3</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">PHASE 3 &middot; PLANUNG</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Meilensteine, Aufgaben, Zust&auml;ndigkeiten &amp; Zeitplan</div></div>
+    </div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#23323a;margin-bottom:4px;">Meilensteine &amp; Zeitplan</div>
+    <div style="font-size:12px;color:#7c8a92;margin-bottom:12px;">Was muss bis wann fertig sein?</div>
+    <div style="border:1px solid #d2e0d6;border-radius:10px;overflow:hidden;margin-bottom:24px;">
+      <div style="display:flex;background:#479460;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:0 0 100px;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">bis wann</div>
+        <div style="flex:1;padding:9px 10px;">Meilenstein / Ergebnis</div>
+      </div>
+      <sc-for list="{{ rows4 }}" as="r" hint-placeholder-count="4">
+        <div style="display:flex;border-top:1px solid #e3ece5;height:46px;">
+          <div style="flex:0 0 100px;border-right:1px solid #e3ece5;"></div>
+          <div style="flex:1;"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:#eef4f9;border:1px solid #cddcea;border-radius:10px;padding:10px 15px;margin-bottom:20px;font-size:11.5px;color:#2f4f80;line-height:1.45;">&#128248; <b>Team-Plakat einkleben:</b> Foto eures aktuellen Team-Plakats (Kanban) hier einfügen oder ausdrucken &amp; aufkleben.</div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#23323a;margin-bottom:4px;">Aufgaben &amp; Zust&auml;ndigkeiten</div>
+    <div style="font-size:12px;color:#7c8a92;margin-bottom:12px;">Wer &uuml;bernimmt was f&uuml;r die Durchf&uuml;hrung?</div>
+    <div style="border:1px solid #d2e0d6;border-radius:10px;overflow:hidden;">
+      <div style="display:flex;background:#57a062;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:1.5;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">Aufgabe</div>
+        <div style="flex:1;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">Wer?</div>
+        <div style="flex:0 0 100px;padding:9px 10px;">bis wann</div>
+      </div>
+      <sc-for list="{{ rows5 }}" as="r" hint-placeholder-count="5">
+        <div style="display:flex;border-top:1px solid #e3ece5;height:46px;">
+          <div style="flex:1.5;border-right:1px solid #e3ece5;"></div>
+          <div style="flex:1;border-right:1px solid #e3ece5;"></div>
+          <div style="flex:0 0 100px;"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 5 / 7</span></div>
+  </div>
+
+  <!-- ===== SEITE 6 - DURCHFUEHRUNG + CHECKPOINT 2 ===== -->
+  <div class="page" data-screen-label="Seite 6 - Durchfuehrung &amp; Checkpoint 2">
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#57a062,#6aab5a);border-radius:11px;padding:11px 16px;margin-bottom:18px;">
+      <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;">4</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">PHASE 4 &middot; DURCHF&Uuml;HRUNG</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Arbeiten, Teamsitzungen, Prototyp bauen, dokumentieren</div></div>
+    </div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#23323a;margin-bottom:4px;">Teamsitzungen &amp; mein Beitrag</div>
+    <div style="font-size:12px;color:#7c8a92;margin-bottom:12px;">Wann habt ihr gearbeitet, was wurde besprochen, was war meine Aufgabe?</div>
+    <div style="border:1px solid #d8e4ce;border-radius:10px;overflow:hidden;margin-bottom:22px;">
+      <div style="display:flex;background:#6aab5a;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:0 0 74px;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">Datum</div>
+        <div style="flex:1.6;padding:9px 10px;border-right:1px solid rgba(255,255,255,.25);">Was haben wir gemacht?</div>
+        <div style="flex:1.3;padding:9px 10px;">Meine Aufgabe</div>
+      </div>
+      <sc-for list="{{ rows4 }}" as="r" hint-placeholder-count="4">
+        <div style="display:flex;border-top:1px solid #e7efe0;height:46px;">
+          <div style="flex:0 0 74px;border-right:1px solid #e7efe0;"></div>
+          <div style="flex:1.6;border-right:1px solid #e7efe0;"></div>
+          <div style="flex:1.3;"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:#eef4f9;border:1px solid #cddcea;border-radius:10px;padding:10px 15px;margin-bottom:18px;font-size:11.5px;color:#2f4f80;line-height:1.45;">&#128248; <b>Aktuelles Team-Plakat-Foto einkleben</b> &ndash; zeigt den Fortschritt seit der Planung.</div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;color:#23323a;margin-bottom:10px;">Zwischenreflexion (F&ouml;Hi)</div>
+    <div style="display:flex;gap:14px;margin-bottom:22px;">
+      <div style="flex:1;background:#f0f8f2;border:1px solid #d2e6d6;border-radius:11px;padding:12px 14px;"><div style="font-size:12px;color:#2f7a52;font-weight:700;margin-bottom:9px;">&#10003; F&ouml;rderlich war &hellip;</div><div class="lines" style="height:90px;"></div></div>
+      <div style="flex:1;background:#fdf2f0;border:1px solid #f0d6d2;border-radius:11px;padding:12px 14px;"><div style="font-size:12px;color:#b5566a;font-weight:700;margin-bottom:9px;">&#10007; Hinderlich war &hellip;</div><div class="lines" style="height:90px;"></div></div>
+    </div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 6 / 7</span></div>
+  </div>
+
+  <!-- ===== SEITE 7 - ABSCHLUSS / VERTEIDIGUNG ===== -->
+  <div class="page" data-screen-label="Seite 7 - Abschluss &amp; Verteidigung">
+    <div style="display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,#2f4f80,#3f6ba0);border-radius:11px;padding:11px 16px;margin-bottom:18px;">
+      <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;">&#127891;</span>
+      <div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;">PHASE 5 &middot; ABSCHLUSS &amp; VERTEIDIGUNG</div><div style="font-size:11px;color:rgba(255,255,255,.85);">Projekttag der Jg. 5&ndash;10 &middot; Selbstbeurteilung &amp; Notenfindung</div></div>
+    </div>
+
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14.5px;color:#23323a;margin-bottom:4px;">Selbstbeurteilung &ndash; was kann ich nachweisen?</div>
+    <div style="font-size:11.5px;color:#7c8a92;margin-bottom:11px;">Sch&auml;tze dich je Bereich ein (1 = Ansatz &hellip; 4 = sicher) und nenne einen Beleg aus deinem Logbuch.</div>
+    <div style="border:1px solid #d2e0d6;border-radius:10px;overflow:hidden;margin-bottom:18px;">
+      <div style="display:flex;background:#2f7a52;color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:11px;">
+        <div style="flex:0 0 104px;padding:8px 10px;border-right:1px solid rgba(255,255,255,.25);">Bereich</div>
+        <div style="flex:1.7;padding:8px 10px;border-right:1px solid rgba(255,255,255,.25);">Mein Beleg aus dem Logbuch</div>
+        <div style="flex:0 0 84px;padding:8px 10px;text-align:center;">Niveau</div>
+      </div>
+      <sc-for list="{{ bereiche }}" as="b" hint-placeholder-count="6">
+        <div style="display:flex;border-top:1px solid #e3ece5;min-height:44px;align-items:stretch;">
+          <div style="flex:0 0 104px;border-right:1px solid #e3ece5;padding:7px 10px;display:flex;flex-direction:column;justify-content:center;"><span style="font-size:11.5px;font-weight:700;color:#2f5c44;">{{ b.area }}</span><span style="font-size:9.5px;color:#8aa394;line-height:1.2;">{{ b.hint }}</span></div>
+          <div style="flex:1.7;border-right:1px solid #e3ece5;"></div>
+          <div style="flex:0 0 84px;display:flex;align-items:center;justify-content:center;gap:4px;">
+            <sc-for list="{{ levels }}" as="l" hint-placeholder-count="4">
+              <span style="width:17px;height:17px;border-radius:50%;border:1.5px solid #b3ccbb;color:#6a8a76;font-size:9.5px;display:flex;align-items:center;justify-content:center;">{{ l }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;gap:14px;margin-bottom:16px;">
+      <div style="flex:1;background:#eef4f9;border-radius:11px;padding:13px 15px;">
+        <div style="font-size:11.5px;color:#2f4f80;font-weight:700;margin-bottom:10px;">Das bringe ich mit:</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <sc-for list="{{ checklist }}" as="c" hint-placeholder-count="4">
+            <div style="display:flex;gap:9px;align-items:flex-start;font-size:11.5px;color:#3d4d57;line-height:1.35;"><span style="width:15px;height:15px;border-radius:4px;border:2px solid #9fb6cc;flex:0 0 15px;margin-top:1px;"></span><span style="text-wrap:pretty;">{{ c }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="flex:0 0 150px;text-align:center;border:2px solid #d2dee2;border-radius:12px;padding:14px 10px;display:flex;flex-direction:column;justify-content:center;"><div style="font-size:11px;color:#7c8a92;font-weight:700;margin-bottom:8px;">Mein Notenvorschlag</div><div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:42px;color:#c3cfd4;">__</div></div>
+    </div>
+
+    <div style="background:#1a2734;border-radius:13px;padding:15px 18px;">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;"><span style="font-size:16px;">&#11088;</span><span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;color:#fff;">Mein KI-Prompt f&uuml;r die Selbsteinsch&auml;tzung</span></div>
+      <div style="font-size:10.5px;color:#9fb2c2;margin-bottom:11px;line-height:1.45;">Kopiere dein ausgef&uuml;lltes Logbuch in eine KI und nutze diesen Prompt. Das Ergebnis ist ein <b>Vorschlag</b> &ndash; die endg&uuml;ltige Note vergibt deine Lehrkraft.</div>
+      <div style="background:#0f1822;border:1px solid #28394a;border-radius:9px;padding:13px 15px;font-size:10.5px;line-height:1.6;color:#d6e3ef;">&bdquo;Du bist mein Lerncoach. Unten ist mein Prozess-Logbuch zum Projekt &raquo;&hellip;&laquo;. Beurteile meinen <b>Lernprozess</b> (nicht nur das Produkt) anhand: 1)&nbsp;Inputnutzung, 2)&nbsp;KI-Kompetenz, 3)&nbsp;Eigenst&auml;ndigkeit, 4)&nbsp;Teamarbeit, 5)&nbsp;meine Lernziele&nbsp;[&hellip;], 6)&nbsp;Reflexionstiefe. Fasse pro Kriterium belegt zusammen, nenne je eine St&auml;rke + einen Entwicklungspunkt, sch&auml;tze ein Niveau (1&ndash;4) und leite einen <b>Notenvorschlag ab: Ziffer (1&ndash;6) plus kurzer Argumentationstext</b>, der die Ziffer begr&uuml;ndet. Bewerte nur, was belegt ist. Schreibe zum Schluss ein ehrliches Feedback (max.&nbsp;150 W&ouml;rter).&ldquo;</div>
+    </div>
+
+    <div class="ft"><span>Prozess-Logbuch &middot; Sch&uuml;lerfassung</span><span>Seite 7 / 7</span></div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:794,&quot;height&quot;:1123}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const isIconLike = (style) => {
+      const w = style.match(/width\s*:\s*(\d+)px/);
+      const h = style.match(/height\s*:\s*(\d+)px/);
+      if (/border-radius\s*:\s*50%/.test(style)) return true;
+      if (w && h && w[1] === h[1]) return true;
+      if (w && parseInt(w[1], 10) < 40) return true;
+      return false;
+    };
+    const els = document.querySelectorAll('.page [style*="height:"]');
+    els.forEach((el) => {
+      const style = el.getAttribute('style') || '';
+      if (!/height\s*:\s*\d+px/.test(style)) return;
+      if (isIconLike(style)) return;
+      const newStyle = style.replace(/height\s*:\s*(\d+)px/, 'min-height:$1px');
+      el.setAttribute('style', newStyle);
+      if (el.children.length === 0) {
+        el.setAttribute('contenteditable', 'true');
+        el.style.whiteSpace = 'pre-wrap';
+        el.style.wordBreak = 'break-word';
+        el.style.cursor = 'text';
+        el.style.paddingTop = '2px';
+      } else {
+        // Row container (e.g. a table row): its cells carry no height of
+        // their own, only the row does — make the empty cell children
+        // editable too, so typing in one grows the whole row.
+        Array.from(el.children).forEach((cell) => {
+          if (cell.children.length === 0 && !cell.hasAttribute('contenteditable')) {
+            cell.setAttribute('contenteditable', 'true');
+            cell.style.whiteSpace = 'pre-wrap';
+            cell.style.wordBreak = 'break-word';
+            cell.style.cursor = 'text';
+            cell.style.paddingTop = '2px';
+            cell.style.minHeight = '100%';
+          }
+        });
+      }
+    });
+  }
+  renderVals() {
+    return {
+      rows3: [1,2,3],
+      rows4: [1,2,3,4],
+      rows3b: [1,2,3],
+      rows5: [0,1,2,3,4],
+      levels: [1,2,3,4],
+      formate: ['Lerncheck','Präsentation','Karikatur','Podcast','Erklärvideo','anderes …'],
+      mentorIdeas: [
+        { label:'Sparringspartner', text:'Stelle mir 3 Rückfragen, die Schwachstellen aufdecken.' },
+        { label:'Feedback', text:'Gib mir Feedback zu … nach diesen Kriterien: …' },
+        { label:'Verständnis', text:'Erkläre mir … einfach, dann vertieft.' },
+        { label:'Planung', text:'Zerlege mein Ziel … in Schritte mit Zeitplan.' },
+        { label:'Perspektive', text:'Welche Sichtweisen habe ich übersehen?' }
+      ],
+      bereiche: [
+        { area:'Fach', hint:'Begriffe, Belege' },
+        { area:'Methode', hint:'Recherche, Struktur' },
+        { area:'KI & Medien', hint:'gezielt, kritisch' },
+        { area:'Sozial', hint:'Team, Absprachen' },
+        { area:'Selbst', hint:'Reflexion' },
+        { area:'Produkt', hint:'Ziel & SDG' }
+      ],
+      checklist: [
+        'Mein vollständig ausgefülltes Prozess-Logbuch',
+        'Meine KI-Prompts und Chatverläufe (Screenshots)',
+        'Mein begründeter Notenvorschlag (Ziffer + Argumentationstext)',
+        'Das schriftliche Feedback der KI'
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

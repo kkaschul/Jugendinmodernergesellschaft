@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  .doc-frame{width:100%;border-collapse:collapse}
+  .doc-frame td{padding:0}
+  .hdr-space,.ftr-space{display:none}
+  .avoid{break-inside:avoid}
+  @page{size:A4;margin:0}
+  @media print{
+    html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .sheet{box-shadow:none!important;margin:0!important;border-radius:0!important;width:100%!important;min-height:auto!important}
+    .hdr-space,.ftr-space{display:table-cell;height:14mm}
+    h1,h2,h3,h4{break-after:avoid}
+    p,li{orphans:3;widows:3}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:820px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / als PDF speichern</button>
+  </div>
+
+  <div class="sheet" style="max-width:820px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:20px;">
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.55 0.18 305); color:#fff; font:700 12px 'Schibsted Grotesk',sans-serif;">Pflichtinput · Tag 2</span>
+        <span style="padding:4px 11px; border-radius:999px; background:#efe9dc; color:#6f665a; font:600 12px 'Schibsted Grotesk',sans-serif;">ca. 20 Minuten</span>
+      </div>
+
+      <h1 style="margin:0 0 6px; font:700 32px/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#1f1a15;">Wie führe ich ein gutes Interview?</h1>
+      <p style="margin:0 0 26px; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Nach der Gruppenbildung: Holt euch Wissen, das kein Dossier liefern kann — direkt von Menschen vor Ort.</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; padding:18px 20px; background:#faf7f0; margin-bottom:26px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:8px;">Ziel des Inputs</div>
+        <p style="margin:0; font:400 15px/1.55 'Source Serif 4',Georgia,serif; color:#352f28;">Eure Gruppe kann nach diesem Input <b>offene Interviewfragen</b> formulieren, kennt die <b>drei Rollen</b> im Interview und weiß, wie eine höfliche Anfrage an eine Expertin/einen Experten aussieht.</p>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Warum überhaupt interviewen?</h2>
+      <p style="margin:0 0 20px; font:400 14.5px/1.6 'Source Serif 4',Georgia,serif; color:#312b24;">Die Dossiers liefern euch Fachwissen — aber nicht, wie sich ein Thema konkret <b>in eurer Gemeinde</b> darstellt. Ein Interview mit einer Bürgermeisterin, einer Schulsozialarbeiterin oder einer Verbraucherberaterin liefert genau das: aktuelle, lokale, aus erster Hand stammende Information, die kein Text ersetzen kann.</p>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Gute Fragen stellen</h2>
+      <p style="margin:0 0 14px; font:400 14.5px/1.6 'Source Serif 4',Georgia,serif; color:#312b24;">Eine gute Interviewfrage ist <b>offen</b> (nicht mit Ja/Nein zu beantworten), <b>konkret</b> und lädt zum Erzählen ein. Nutzt W-Fragen: Wie, Warum, Wodurch, Was müsste sich ändern?</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px;">
+        <div style="border:1px solid #e8e2d6; border-radius:11px; padding:13px 15px; background:oklch(0.62 0.16 25 / 0.06);">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#b5562e; margin-bottom:6px;">Eher ungeeignet</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">„Finden Sie das Thema wichtig?"</div>
+        </div>
+        <div style="border:1px solid #e8e2d6; border-radius:11px; padding:13px 15px; background:oklch(0.55 0.13 150 / 0.08);">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#2f7d5b; margin-bottom:6px;">Besser</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">„Woran merken Sie in Ihrer Arbeit, dass dieses Thema Jugendliche beschäftigt?"</div>
+        </div>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Drei Rollen im Interview</h2>
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:12px; overflow:hidden; margin-bottom:24px;">
+        <div style="display:flex; flex-direction:column;">
+          <div style="padding:12px 16px; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:120px;">Fragende:r</span><span style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Stellt die Fragen, hört aktiv zu, fragt bei interessanten Antworten kurz nach.</span></div>
+          <div style="padding:12px 16px; border-top:1px solid #ece6da; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:120px;">Protokollant:in</span><span style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Hält die Antworten in Stichworten fest — keine wörtliche Mitschrift nötig.</span></div>
+          <div style="padding:12px 16px; border-top:1px solid #ece6da; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:120px;">Zeitwächter:in</span><span style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Behält die vereinbarte Zeit im Blick und bedankt sich zum Abschluss.</span></div>
+        </div>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Höflich anfragen — die Grundregel</h2>
+      <p style="margin:0 0 20px; font:400 14.5px/1.6 'Source Serif 4',Georgia,serif; color:#312b24;">Eine gute Anfrage nennt: wer ihr seid, worum es geht, wie viel Zeit ihr braucht, und bis wann ihr eine Antwort bräuchtet. Die vollständige Vorlage und Übung dazu findet ihr in der Werkstatt „Vertiefung: Recherche &amp; Experten-Interview".</p>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Ablauf (ca. 20 Min)</h2>
+      <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:26px;">
+        <div class="avoid" style="display:flex; gap:14px; border-left:4px solid oklch(0.55 0.18 305); background:#faf7f0; border-radius:0 11px 11px 0; padding:12px 16px;">
+          <div style="flex:0 0 auto; font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:64px;">0–8 Min</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Warum interviewen? + Kriterien guter Fragen (siehe oben).</div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; border-left:4px solid oklch(0.55 0.18 305); background:#faf7f0; border-radius:0 11px 11px 0; padding:12px 16px;">
+          <div style="flex:0 0 auto; font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:64px;">8–15 Min</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Rollen vorstellen, Lehrkraft führt kurzes Beispiel-Interview mit Freiwilligen vor.</div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; border-left:4px solid oklch(0.55 0.18 305); background:#faf7f0; border-radius:0 11px 11px 0; padding:12px 16px;">
+          <div style="flex:0 0 auto; font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:64px;">15–20 Min</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Gruppen wenden die Kriterien probeweise auf eine eigene Beispielfrage an.</div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:16px 18px; background:oklch(0.55 0.18 305 / 0.08); border:1px solid oklch(0.55 0.18 305 / 0.25);">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:7px;">Weiter geht's</div>
+        <p style="margin:0; font:400 13.5px/1.55 'Source Serif 4',Georgia,serif; color:#433d35;">Direkt im Anschluss: Interviewpartner:in finden, eigene 5–7 Fragen ausformulieren und Kontakt aufnehmen — mit der Werkstatt <b>„Vertiefung: Recherche &amp; Experten-Interview"</b>.</p>
+      </div>
+
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

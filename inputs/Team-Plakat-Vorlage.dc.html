@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  @page{size:A3 landscape;margin:8mm}
+  @media print{
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .poster{box-shadow:none!important;width:100%!important;height:100%!important;}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:1100px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken auf A3 / als PDF speichern</button>
+  </div>
+
+  <div class="screen-only" style="max-width:1100px; margin:0 auto 18px; background:#fffdf8; border-radius:14px; padding:16px 20px; border:1px solid #e8e2d6;">
+    <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.62 0.13 58); margin-bottom:6px;">Team-Plakat · Kanban für Klärung &amp; Planung</div>
+    <p style="margin:0; font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Am Ende der Klärungsphase (Pitch) füllt jede Gruppe dieses Plakat mit den feststehenden Inhalten – es wandert dann durch die Planungs- und Durchführungsphase mit, wird laufend aktualisiert (Kärtchen/Stifte) und <b>immer wieder abfotografiert</b>: Jedes Foto ist ein Beleg für die Dokumentationsmappe.</p>
+  </div>
+
+  <div class="poster" style="max-width:1100px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:28px 30px;">
+
+    <div style="display:flex; gap:16px; margin-bottom:16px;">
+      <div style="flex:1; border:2px solid #2c2722; border-radius:10px; padding:12px 16px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#9a8f7d; margin-bottom:6px;">Team-Name</div>
+        <div style="border-bottom:1px dotted #d8d1c2; height:26px;"></div>
+      </div>
+      <div style="flex:1.6; border:2px solid #2c2722; border-radius:10px; padding:12px 16px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#9a8f7d; margin-bottom:6px;">Mitglieder</div>
+        <div style="border-bottom:1px dotted #d8d1c2; height:26px;"></div>
+      </div>
+      <div style="flex:1.6; border:2px solid #2c2722; border-radius:10px; padding:12px 16px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#9a8f7d; margin-bottom:6px;">Projekt / Problemfrage</div>
+        <div style="border-bottom:1px dotted #d8d1c2; height:26px;"></div>
+      </div>
+    </div>
+
+    <div style="border:2px solid #2c2722; border-radius:10px; padding:11px 16px; margin-bottom:16px; background:oklch(0.62 0.13 58 / 0.08);">
+      <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.5 0.13 58); margin-bottom:5px;">Gelingensfaktoren — was muss klappen, damit unser Projekt wirkt?</div>
+      <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+    </div>
+
+    <div style="border:2px solid #2c2722; border-radius:10px; padding:12px 16px; margin-bottom:16px; background:oklch(0.55 0.18 305 / 0.06);">
+      <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:6px;">Fachliche Inhalte — was aus Recherche &amp; Interview steckt in unserem Projekt?</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+        <div>
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; color:#5a4b78; margin-bottom:5px;">Zentrale Fachbegriffe, die wir nutzen</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div>
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; color:#5a4b78; margin-bottom:5px;">Wichtigster Beleg (Quelle/Interview)</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:0; border:2px solid #2c2722; border-radius:10px; overflow:hidden;">
+      <div style="background:#efe9dc; padding:10px 12px; font:700 12px 'Schibsted Grotesk',sans-serif; color:#3b352d; border-right:2px solid #2c2722; border-bottom:2px solid #2c2722;">Aufgaben (zu erledigen)</div>
+      <div style="background:#efe9dc; padding:10px 12px; font:700 12px 'Schibsted Grotesk',sans-serif; color:#3b352d; border-right:2px solid #2c2722; border-bottom:2px solid #2c2722;">In Arbeit</div>
+      <div style="background:oklch(0.55 0.13 150 / 0.15); padding:10px 12px; font:700 12px 'Schibsted Grotesk',sans-serif; color:#2f5c44; border-right:2px solid #2c2722; border-bottom:2px solid #2c2722;">Erledigt ✓</div>
+      <div style="background:oklch(0.62 0.16 25 / 0.1); padding:10px 12px; font:700 12px 'Schibsted Grotesk',sans-serif; color:#8a3e22; border-bottom:2px solid #2c2722;">Hindernisse / Notizen</div>
+
+      <div style="min-height:280px; border-right:2px solid #2c2722; background:repeating-linear-gradient(transparent,transparent 34px,#ece6da 34px,#ece6da 35px);"></div>
+      <div style="min-height:280px; border-right:2px solid #2c2722; background:repeating-linear-gradient(transparent,transparent 34px,#ece6da 34px,#ece6da 35px);"></div>
+      <div style="min-height:280px; border-right:2px solid #2c2722; background:repeating-linear-gradient(transparent,transparent 34px,#ece6da 34px,#ece6da 35px);"></div>
+      <div style="min-height:280px; background:repeating-linear-gradient(transparent,transparent 34px,#ece6da 34px,#ece6da 35px);"></div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

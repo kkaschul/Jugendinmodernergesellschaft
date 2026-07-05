@@ -15,6 +15,9 @@
   *{box-sizing:border-box}
   html,body{margin:0}
   .card{break-inside:avoid}
+  summary::-webkit-details-marker{display:none}
+  summary{position:relative}
+  summary::after{content:'→'; position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:18px; color:#9a8f7d;}
   @media print{
     .no-print{display:none!important}
     body,.board{background:#fff!important}
@@ -23,18 +26,22 @@
   }
 </style>
 </helmet>
-<div class="board" style="min-height:100vh; background-color:#f4f1ea; background-image:radial-gradient(rgba(60,50,40,.07) 1.2px, transparent 1.2px); background-size:22px 22px; padding:42px 32px 60px; font-family:'Schibsted Grotesk',system-ui,sans-serif; color:#2c2722;">
+<div class="board" style="min-height:100vh; background-color:#eef3f6; background-image:radial-gradient(rgba(60,90,120,.06) 1.2px, transparent 1.2px); background-size:22px 22px; padding:42px 32px 60px; font-family:'Schibsted Grotesk',system-ui,sans-serif; color:#2c2722;">
 
   <div style="max-width:1340px; margin:0 auto;">
 
     <div style="margin-bottom:26px;">
       <div style="font:700 12px 'Schibsted Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#9a8f7d; margin-bottom:14px;">Projektlernen · Jahrgang 7 · Politik &amp; Wirtschaft (Hessen)</div>
       <h1 style="margin:0; font:700 clamp(28px,4.2vw,46px)/1.08 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#221d18;">Wie können wir junge Menschen in einer modernen Gesellschaft <span style="color:oklch(0.63 0.17 33);">stärken</span>?</h1>
-      <p style="margin:14px 0 0; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Fachinputs à 20 Minuten Instruktion — verankert im hessischen Lehrplan, Themenfelder 7.1–7.4. Zwei Sorten: <b style="color:#3b352d;">Themen-Inputs</b> regen zum Nachdenken an, <b style="color:oklch(0.52 0.16 300);">Grundbegriffe &amp; Rollen</b> klären zentrale Begriffe (z. B. Was ist eine Kommune?).</p>
-    </div>
 
-    <div style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:24px 26px 26px; margin-bottom:26px;">
-      <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:#9a8f7d; margin-bottom:14px;">Ablauf des Projekttags</div>
+      <div style="display:flex; gap:20px; align-items:stretch; margin-top:32px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px; flex:1 1 320px;">
+        <a href="Dokumentationsmappe.dc.html" style="text-decoration:none; display:flex; align-items:center; gap:8px; padding:16px 18px; border-radius:16px; background:#fffdf8; border:1.5px solid #2c2722; flex:0 0 auto; min-height:76px; position:relative;"><span style="font-size:20px; line-height:1;">📁</span><span style="font:700 16px 'Bricolage Grotesque',sans-serif; color:#2c2722; flex:1;">Dokumentationsmappe</span><span style="position:absolute; right:0; top:50%; transform:translateY(-50%); font:700 18px 'Bricolage Grotesque',sans-serif; color:#9a8f7d;">→</span></a>
+
+        <details style="flex:0 0 auto; display:flex; flex-direction:column;">
+          <summary style="cursor:pointer; padding:16px 18px; font:700 16px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:8px; list-style:none; border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; min-height:76px;"><span style="font-size:20px; line-height:1;">🗓️</span>Ablauf des Projekttags</summary>
+          <div style="margin-top:10px; padding:20px 26px; border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8;">
+      <p style="margin:0 0 18px; font:500 14.5px/1.55 'Schibsted Grotesk',sans-serif; color:#6f665a;">Fachinputs à 20 Minuten Instruktion — verankert im hessischen Lehrplan, Themenfelder 7.1–7.4. Zwei Sorten: <b style="color:#3b352d;">Themen-Inputs</b> regen zum Nachdenken an, <b style="color:oklch(0.52 0.16 300);">Grundbegriffe &amp; Rollen</b> klären zentrale Begriffe (z. B. Was ist eine Kommune?).</p>
 
       <p style="margin:0 0 18px; font:400 14.5px/1.55 'Schibsted Grotesk',sans-serif; color:#5a5247;">An diesem Projekttag arbeiten <b style="color:#3b352d;">Religion/Ethik</b> und <b style="color:#3b352d;">PoWi</b> gemeinsam am Oberthema, während <b style="color:#3b352d;">Biologie</b> parallel methodische und fachliche Kernkompetenzen stärkt. Verpflichtend besucht jede:r Schüler:in <b>je zwei Inputs</b> aus PoWi, Ethik und Religion. <b>Religion/Ethik plant ihre Inputs eigenständig</b> — diese Pinnwand deckt die PoWi-Seite ab.</p>
 
@@ -44,20 +51,24 @@
           <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Breites Angebot an Inputs kennenlernen, mit Denkaufgaben zur Auswertung.</span>
         </div>
         <div style="display:flex; flex-direction:column; gap:6px; padding:13px 15px; border-radius:12px; background:#faf7f0; border:1px solid #ece6da;">
-          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">2 · Klärung</span>
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.18 305);">2 · Klärung</span>
           <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Spezialisierung in der Gruppe: eigene Handlungssituation &amp; Problemstellung festlegen.</span>
         </div>
         <div style="display:flex; flex-direction:column; gap:6px; padding:13px 15px; border-radius:12px; background:#faf7f0; border:1px solid #ece6da;">
-          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.62 0.13 58);">3 · Planung/Durchführung</span>
-          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Eigenes Projekt umsetzen – aktiv werden, ggf. mit Unterstützung von außen.</span>
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.62 0.13 58);">3 · Planung</span>
+          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Meilensteine, Zuständigkeiten &amp; Nachhaltigkeitsziel (SDG) festlegen.</span>
         </div>
         <div style="display:flex; flex-direction:column; gap:6px; padding:13px 15px; border-radius:12px; background:#faf7f0; border:1px solid #ece6da;">
-          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.52 0.16 300);">4 · Verteidigung</span>
-          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Präsentation &amp; Bewertung des Projekts, Lerncheck / Könnensbeweis.</span>
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.62 0.13 58);">4 · Durchführung</span>
+          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Umsetzen, Teamsitzungen, Zwischenreflexion – aktiv werden.</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px; padding:13px 15px; border-radius:12px; background:#faf7f0; border:1px solid #ece6da;">
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.52 0.16 300);">5 · Abschluss</span>
+          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Präsentation &amp; Bewertung des Projekts, Selbstbeurteilung, Verteidigung.</span>
         </div>
       </div>
 
-      <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:#9a8f7d; margin-bottom:10px;">Stundenplan-Grundgerüst (Findungsphase) — immer 2 von 3 Fächern parallel</div>
+      <h3 style="margin:0 0 10px; font:700 18px 'Bricolage Grotesque',sans-serif; letter-spacing:-.005em; color:#1f1a15; display:flex; align-items:center; gap:8px;"><span style="font-size:18px; line-height:1;">⏰</span>Stundenplan-Grundgerüst (Findungsphase) — immer 2 von 3 Fächern parallel</h3>
       <div style="overflow-x:auto;">
         <div style="display:grid; grid-template-columns:110px repeat(6, minmax(110px,1fr)); gap:1px; background:#e8e2d6; border:1px solid #e8e2d6; border-radius:10px; overflow:hidden; min-width:760px;">
           <div style="background:#f3eee3; padding:8px 10px; font:700 12px 'Schibsted Grotesk',sans-serif; color:#6f665a;">Stunde</div>
@@ -102,10 +113,12 @@
         </div>
       </div>
       <p style="margin:10px 0 0; font:400 12.5px/1.5 'Schibsted Grotesk',sans-serif; color:#9a8f7d;">In den Stunden 2–4 entscheidet sich jede:r Schüler:in je Stunde für eines der parallel angebotenen Fächer <b>oder für Weiterarbeit</b>. <b>Reli und Ethik liegen nie gleichzeitig</b> — PoWi ist immer der Parallel-Partner. Über die Findungsphase verteilt wiederholen sich die Blöcke so, dass am Ende jede:r zwei Inputs je Fach besucht hat. PoWi-Inputs werden über diese Pinnwand ausgewählt; Reli- und Ethik-Inputs planen die jeweiligen Fachschaften eigenständig.</p>
-    </div>
+          </div>
+        </details>
 
-    <div style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:24px 26px 26px; margin-bottom:26px;">
-      <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:#9a8f7d; margin-bottom:6px;">Lerngruppenabfolge · Jahresübersicht</div>
+        <details style="flex:0 0 auto; display:flex; flex-direction:column;">
+          <summary style="cursor:pointer; padding:16px 18px; font:700 16px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:8px; list-style:none; border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; min-height:76px;"><span style="font-size:20px; line-height:1;">📅</span>Lerngruppenabfolge · Jahresübersicht</summary>
+          <div style="margin-top:10px; padding:20px 26px; border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8;">
       <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Drei Lerngruppen durchlaufen die Bio-Themen (Mikroskop, Sinnesorgane, Evolution) und die Projektphasen (F = Findung, K = Klärung, P/D = Planung/Durchführung, B = Bio) versetzt übers Jahr. Die „Noten"-Zeilen markieren Bewertungszeitpunkte.</p>
 
       <div style="overflow-x:auto;">
@@ -170,7 +183,19 @@
         </div>
       </div>
       <p style="margin:12px 0 0; font:400 12.5px/1.5 'Schibsted Grotesk',sans-serif; color:#9a8f7d;">F = Findung · K = Klärung · P/D = Planung/Durchführung · B = Bio. Quelle: Jahresübersicht Projekttag 7 (Abfolge_PT7).</p>
+      </div>
+    </details>
+      </div>
+        <img src="assets/TitelPTPowi.png" alt="Titelbild: Fünf Jugendliche sitzen mit dem Rücken zur Kamera vor einer Stadtsilhouette bei Sonnenuntergang, die Arme erhoben; umrahmt von Symbolen für Kommunikation, Wahlen, Umwelt, Wirtschaft und Religionen. Text: Wie können wir junge Menschen in einer modernen Gesellschaft stärken?" style="flex:0 0 260px; width:260px; height:auto; border-radius:16px; object-fit:cover; box-shadow:0 6px 20px rgba(40,30,20,.15);">
+      </div>
     </div>
+
+    <h2 style="margin:28px 0 18px; font:700 30px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:12px;"><span style="font-size:28px; line-height:1;">🪜</span>Phasenübersicht</h2>
+
+    <details open style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">1️⃣</span>Phase 1 — Findung: Inputs &amp; Antwortkarten</summary>
+      <div style="padding-bottom:26px;">
+      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Fachinputs unten auswählen, am Ende jeweils eine <a href="inputs/Antwortkarten-Vorlage.dc.html" style="color:oklch(0.63 0.17 33); font-weight:700;">Antwortkarte</a> ausfüllen.</p>
 
     <div class="no-print" style="display:flex; flex-wrap:wrap; gap:16px 24px; align-items:center; justify-content:space-between; padding:16px 18px; background:rgba(255,255,255,.7); border:1px solid #e8e2d6; border-radius:14px; margin-bottom:10px;">
       <div style="display:flex; flex-wrap:wrap; gap:8px;">
@@ -184,35 +209,9 @@
         <button onClick="{{ printPage }}" style="cursor:pointer; padding:8px 16px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / PDF</button>
       </div>
     </div>
-    <p class="no-print" style="margin:0 0 22px; font:500 13px 'Schibsted Grotesk',sans-serif; color:#9a8f7d;">Tipp: Karte antippen, um sie für einen Input auszuwählen · oben nach Themenfeld filtern · drucken &amp; im Kollegium verteilen.</p>
+    <p class="no-print" style="margin:0 0 22px; font:500 13px 'Schibsted Grotesk',sans-serif; color:#9a8f7d;">Tipp: Karte antippen, um sie für einen Input auszuwählen · oben nach Themenfeld filtern · drucken &amp; im Kollegium verteilen. Am Ende jedes Inputs (Reli, Ethik &amp; PoWi) füllt jede:r eine <a href="inputs/Antwortkarten-Vorlage.dc.html" style="color:oklch(0.44 0.16 305); font-weight:600;">Antwortkarte</a> zu einer der drei offenen Fragen aus — sie wird zu Beginn der Klärungsphase zur Brücke in die eigene Problemfrage.</p>
 
-    <div style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:24px 26px 26px; margin-bottom:30px;">
-      <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:#9a8f7d; margin-bottom:6px;">Könnensbeweis · drei Varianten (Einzelarbeit)</div>
-      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Drei gleichwertige Nachweisformen zur Auswahl — jede in Einzelarbeit.</p>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:14px;">
-
-        <a href="Koennensbeweis-Option1-Test.dc.html" style="text-decoration:none; display:flex; flex-direction:column; gap:8px; padding:16px 18px; border-radius:13px; background:#faf7f0; border:1px solid #ece6da;">
-          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">Variante 1</span>
-          <span style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Test</span>
-          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">30-Min-Fachbegriffe-Test, 4 Niveaustufen (A/M/R/E), Mischung MC &amp; offene Fragen, selbstkorrigierend mit Ergebniskarte.</span>
-        </a>
-
-        <a href="Koennensbeweis-Option2-Erklaervideo.dc.html" style="text-decoration:none; display:flex; flex-direction:column; gap:8px; padding:16px 18px; border-radius:13px; background:#faf7f0; border:1px solid #ece6da;">
-          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">Variante 2</span>
-          <span style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Erklärvideo</span>
-          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">3 Begriffe in eigenen Worten erklären, je mit einem Beispiel aus der eigenen Gemeinde. Kriterien vorgegeben.</span>
-        </a>
-
-        <a href="Koennensbeweis-Option3-Plakat.dc.html" style="text-decoration:none; display:flex; flex-direction:column; gap:8px; padding:16px 18px; border-radius:13px; background:#faf7f0; border:1px solid #ece6da;">
-          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">Variante 3</span>
-          <span style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Plakat &amp; Präsentation</span>
-          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Plakat zu 3 Begriffen, je mit einem Beispiel aus der eigenen Gemeinde, plus kurzer freier Vortrag. Kriterien vorgegeben.</span>
-        </a>
-
-      </div>
-    </div>
-
-    <h2 style="margin:0 0 16px; font:700 22px 'Bricolage Grotesque',sans-serif; color:#221d18; letter-spacing:-.01em;">Inputs PoWi Findungsphase</h2>
+    <h2 id="findung-inputs" style="margin:0 0 16px; font:700 22px 'Bricolage Grotesque',sans-serif; color:#221d18; letter-spacing:-.01em; scroll-margin-top:20px;">Inputs PoWi Findungsphase</h2>
 
     <div class="grid" style="display:grid; gap:20px; grid-template-columns:repeat(auto-fill, minmax(330px, 1fr));">
       <sc-for list="{{ filteredCards }}" as="item" hint-placeholder-count="6">
@@ -258,8 +257,137 @@
         </article>
       </sc-for>
     </div>
+      </div>
+    </details>
 
-    <p style="margin:34px 0 0; font:500 13px/1.5 'Schibsted Grotesk',sans-serif; color:#9a8f7d; max-width:70ch;">Grundlage: Lehrplan Politik &amp; Wirtschaft, gymnasialer Bildungsgang (Hessisches Kultusministerium), Sekundarstufe I, Jahrgangsstufe 7 — Themenfelder 7.1 Jugend in der modernen Gesellschaft, 7.2 Demokratie &amp; politische Beteiligung, 7.3 Wirtschaften im privaten Haushalt, 7.4 Medien &amp; Freizeit.</p>
+    <details style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">✅</span>Checkpoint 1 — Könnensbeweis</summary>
+      <div style="padding-bottom:26px;">
+      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Drei gleichwertige Nachweisformen zur Auswahl — jede in Einzelarbeit.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:14px;">
+
+        <a href="Koennensbeweis-Option1-Test.dc.html" style="text-decoration:none; display:flex; flex-direction:column; gap:8px; padding:16px 18px; border-radius:13px; background:#faf7f0; border:1px solid #ece6da;">
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">Variante 1</span>
+          <span style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Test</span>
+          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">30-Min-Fachbegriffe-Test, 4 Niveaustufen (A/M/R/E), Mischung MC &amp; offene Fragen, selbstkorrigierend mit Ergebniskarte.</span>
+        </a>
+
+        <a href="Koennensbeweis-Option2-Erklaervideo.dc.html" style="text-decoration:none; display:flex; flex-direction:column; gap:8px; padding:16px 18px; border-radius:13px; background:#faf7f0; border:1px solid #ece6da;">
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">Variante 2</span>
+          <span style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Erklärvideo</span>
+          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">3 Begriffe in eigenen Worten erklären, je mit einem Beispiel aus der eigenen Gemeinde. Kriterien vorgegeben.</span>
+        </a>
+
+        <a href="Koennensbeweis-Option3-Plakat.dc.html" style="text-decoration:none; display:flex; flex-direction:column; gap:8px; padding:16px 18px; border-radius:13px; background:#faf7f0; border:1px solid #ece6da;">
+          <span style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.55 0.14 252);">Variante 3</span>
+          <span style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Plakat &amp; Präsentation</span>
+          <span style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Plakat zu 3 Begriffen, je mit einem Beispiel aus der eigenen Gemeinde, plus kurzer freier Vortrag. Kriterien vorgegeben.</span>
+        </a>
+
+      </div>
+      </div>
+    </details>
+
+    <details style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">2️⃣</span>Phase 2 — Klärung</summary>
+      <div style="padding-bottom:26px;">
+
+    <div style="border:2.5px solid oklch(0.55 0.18 305); border-radius:18px; background:oklch(0.55 0.18 305 / 0.045); padding:28px 28px 30px; margin:0 0 8px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+        <span style="width:10px; height:10px; border-radius:50%; background:oklch(0.55 0.18 305);"></span>
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:oklch(0.44 0.16 305);">Phase 2 · Klärungsphase</div>
+      </div>
+      <h2 style="margin:0 0 10px; font:700 26px 'Bricolage Grotesque',sans-serif; color:#221d18; letter-spacing:-.01em;">Von der Handlungssituation zur eigenen Problemfrage</h2>
+      <p style="margin:0 0 20px; font:400 14.5px/1.6 'Schibsted Grotesk',sans-serif; color:#5a5247; max-width:78ch;">Jeder Input aus der Findungsphase steckt hinter sich eine reale <b>Handlungssituation</b> — etwas, das in Schule, Familie oder Gemeinde tatsächlich passiert. Daraus lässt sich eine offene <b>Problemfrage</b> im Format „Wie können wir …, damit …?" entwickeln. So funktioniert die Phase:</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:12px; margin-bottom:26px;">
+        <div style="padding:14px 16px; border-radius:12px; background:#fffdf8; border:1px solid oklch(0.55 0.18 305 / 0.25);">
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); margin-bottom:5px;">1 · Frage schärfen</div>
+          <div style="font:400 13px/1.45 'Schibsted Grotesk',sans-serif; color:#5a5247;">Jede:r wählt 1–2 Handlungssituationen aus, die wirklich interessieren, und formuliert daraus eine eigene „Wie können wir …?"-Frage.</div>
+        </div>
+        <div style="padding:14px 16px; border-radius:12px; background:#fffdf8; border:1px solid oklch(0.55 0.18 305 / 0.25);">
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); margin-bottom:5px;">2 · Ideen-Pinnwand</div>
+          <div style="font:400 13px/1.45 'Schibsted Grotesk',sans-serif; color:#5a5247;">Alle Fragen kommen auf Karten an eine gemeinsame Wand — real oder digital.</div>
+        </div>
+        <div style="padding:14px 16px; border-radius:12px; background:#fffdf8; border:1px solid oklch(0.55 0.18 305 / 0.25);">
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); margin-bottom:5px;">3 · Dot-Voting</div>
+          <div style="font:400 13px/1.45 'Schibsted Grotesk',sans-serif; color:#5a5247;">Jede:r vergibt 2–3 Klebepunkte an die Fragen, die am meisten reizen. Interesse bündelt sich sichtbar.</div>
+        </div>
+        <div style="padding:14px 16px; border-radius:12px; background:#fffdf8; border:1px solid oklch(0.55 0.18 305 / 0.25);">
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); margin-bottom:5px;">4 · Gruppenbildung</div>
+          <div style="font:400 13px/1.45 'Schibsted Grotesk',sans-serif; color:#5a5247;">Gruppen entstehen dort, wo sich Punkte häufen — interessensgeleitet, nicht zugeteilt.</div>
+        </div>
+      </div>
+
+      <a href="inputs/Vertiefung-Recherche-Interview.dc.html" style="text-decoration:none; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:16px 18px; border-radius:13px; background:#fffdf8; border:1.5px solid oklch(0.55 0.18 305 / 0.4); margin-bottom:26px;">
+        <div>
+          <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:4px;">Werkstatt · Tag 1–3 (je 08:00–13:20)</div>
+          <div style="font:700 17px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Problemfrage → Recherche → Interview</div>
+          <div style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247; margin-top:3px;">Tag 1 Problemfrage &amp; Recherche · Tag 2 Gruppenbildung &amp; Interview vorbereiten · Tag 3 Interview &amp; Auswertung.</div>
+        </div>
+        <span style="flex:0 0 auto; padding:9px 15px; border-radius:10px; background:oklch(0.55 0.18 305); color:#fff; font:700 13px 'Schibsted Grotesk',sans-serif;">Öffnen →</span>
+      </a>
+
+      <div id="klaerung-inputs" style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:14px; scroll-margin-top:20px;">Handlungssituationen aus den Inputs — als Ausgangspunkt für eigene Problemfragen</div>
+
+      <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));">
+        <sc-for list="{{ klaerungCards }}" as="k" hint-placeholder-count="6">
+          <div style="background:#fffdf8; border:1px solid oklch(0.55 0.18 305 / 0.3); border-radius:13px; padding:15px 17px;">
+            <div style="font:600 14px/1.4 'Bricolage Grotesque',sans-serif; color:#2a2030; margin-bottom:8px;">„{{ k.situation }}"</div>
+            <div style="font:700 12px 'Bricolage Grotesque',sans-serif; color:#221d18; margin-bottom:9px;">{{ k.title }}</div>
+            <div style="font:600 13px/1.45 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305);">{{ k.frage }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+      </div>
+    </details>
+
+    <details style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">🎤</span>Checkpoint 2 — Pitch</summary>
+      <div style="padding-bottom:26px;">
+      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Tag 4 des Fahrplans: Jede Gruppe stellt ihre Projektidee im Plenum vor. Erst nach diesem Checkpoint startet Phase 3 (Planung) — die Startfreigabe.</p>
+      <a href="inputs/Projekt-Pitch-Checkpoint.dc.html" style="text-decoration:none; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:14px 16px; border-radius:12px; background:#faf7f0; border:1.5px solid oklch(0.55 0.18 305 / 0.35);">
+        <div><div style="font:700 15px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Steckbrief &amp; Checkpoint-Kriterien</div><div style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Projektfrage, Zielgruppe, SDG, geplante Maßnahme — plus Kriterien-Checkliste.</div></div>
+        <span style="flex:0 0 auto; padding:8px 13px; border-radius:9px; background:oklch(0.55 0.18 305); color:#fff; font:700 12.5px 'Schibsted Grotesk',sans-serif;">Öffnen →</span>
+      </a>
+      </div>
+    </details>
+
+    <details style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">3️⃣</span>Phase 3 — Planung</summary>
+      <div style="padding-bottom:26px;">
+      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Meilensteine, Zuständigkeiten &amp; Nachhaltigkeitsziel (SDG) festlegen.</p>
+      <a href="inputs/Projektplanung-Meilensteine.dc.html" style="text-decoration:none; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:14px 16px; border-radius:12px; background:#faf7f0; border:1.5px solid oklch(0.62 0.13 58 / 0.35);">
+        <div><div style="font:700 15px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Vom Pitch zum Plan</div><div style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Pflichtinput mit Meilenstein-Kriterien &amp; SDG-Auswahl.</div></div>
+        <span style="flex:0 0 auto; padding:8px 13px; border-radius:9px; background:oklch(0.62 0.13 58); color:#fff; font:700 12.5px 'Schibsted Grotesk',sans-serif;">Öffnen →</span>
+      </a>
+      </div>
+    </details>
+
+    <details style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">4️⃣</span>Phase 4 — Durchführung</summary>
+      <div style="padding-bottom:26px;">
+      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Teamsitzungen, Zwischenreflexion und Checkpoint mit Note (Zwischenstand).</p>
+      <a href="inputs/Durchfuehrung-Teamarbeit.dc.html" style="text-decoration:none; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:14px 16px; border-radius:12px; background:#faf7f0; border:1.5px solid oklch(0.62 0.13 58 / 0.35);">
+        <div><div style="font:700 15px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Dranbleiben &amp; reflektieren</div><div style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Pflichtinput mit Zwischenreflexion &amp; Checkpoint-Vorlage.</div></div>
+        <span style="flex:0 0 auto; padding:8px 13px; border-radius:9px; background:oklch(0.62 0.13 58); color:#fff; font:700 12.5px 'Schibsted Grotesk',sans-serif;">Öffnen →</span>
+      </a>
+      </div>
+    </details>
+
+    <details style="border:1px solid #e8e2d6; border-radius:16px; background:#fffdf8; padding:0 26px; margin-bottom:16px;">
+      <summary style="cursor:pointer; padding:22px 0; font:700 24px 'Bricolage Grotesque',sans-serif; letter-spacing:-.01em; color:#1f1a15; display:flex; align-items:center; gap:9px; list-style:none;"><span style="font-size:22px; line-height:1;">5️⃣</span>Phase 5 — Abschluss</summary>
+      <div style="padding-bottom:26px;">
+      <p style="margin:0 0 16px; font:400 14px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Belege statt Gefühle, KI-Notenvorschlag, Projekttag Jg. 5–10 (Verteidigung).</p>
+      <a href="inputs/Abschluss-Verteidigung.dc.html" style="text-decoration:none; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:14px 16px; border-radius:12px; background:#faf7f0; border:1.5px solid oklch(0.62 0.13 58 / 0.35);">
+        <div><div style="font:700 15px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Selbstbeurteilung &amp; Verteidigung</div><div style="font:400 13px/1.4 'Schibsted Grotesk',sans-serif; color:#5a5247;">Pflichtinput mit Selbstbeurteilungs-Kriterien &amp; KI-Notenvorschlag.</div></div>
+        <span style="flex:0 0 auto; padding:8px 13px; border-radius:9px; background:oklch(0.62 0.13 58); color:#fff; font:700 12.5px 'Schibsted Grotesk',sans-serif;">Öffnen →</span>
+      </a>
+      </div>
+    </details>
+
+    <p style="margin:24px 0 0; font:500 13px/1.5 'Schibsted Grotesk',sans-serif; color:#9a8f7d; max-width:none;">Grundlage: Lehrplan Politik &amp; Wirtschaft (Hessisches Kultusministerium), Sekundarstufe I, Jahrgangsstufe 7 — Themenfelder 7.1 Jugend in der modernen Gesellschaft, 7.2 Demokratie &amp; politische Beteiligung, 7.3 Wirtschaften im privaten Haushalt, 7.4 Medien &amp; Freizeit.</p>
 
   </div>
 </div>
@@ -278,6 +406,8 @@ class Component extends DCLogic {
     { id: 't1', field: '7.1', title: 'Wer bin ich – und wer will ich sein?',
       dossier: 'inputs/Wer-bin-ich.dc.html',
       leitfrage: 'Wie finde ich heraus, wer ich wirklich bin, wenn online alle perfekt wirken?',
+      situation: 'Viele Jugendliche vergleichen sich ständig mit bearbeiteten Bildern im Netz und zweifeln dadurch an sich selbst.',
+      frage: 'Wie können wir …, damit Jugendliche ein starkes Selbstbild entwickeln, das nicht von Likes abhängt?',
       points: [
         'Selbstbild und Fremdbild: Wie sehe ich mich, wie sehen mich andere?',
         'Vorbilder, Idole und Rollen – was prägt meine Identität?',
@@ -287,6 +417,8 @@ class Component extends DCLogic {
     { id: 't2', field: '7.1', title: 'Dazugehören – ohne mich selbst zu verbiegen',
       dossier: 'inputs/Dazugehoeren.dc.html',
       leitfrage: 'Wie bleibe ich ich selbst, wenn die Gruppe etwas anderes von mir will?',
+      situation: 'In Gruppenchats wird oft erwartet, dass alle mitmachen – wer nicht mitzieht, fühlt sich schnell ausgeschlossen.',
+      frage: 'Wie können wir …, damit sich niemand aus Angst vor Ausschluss gegen die eigene Meinung entscheiden muss?',
       points: [
         'Peer-Group: Warum Freundeskreise gerade jetzt so wichtig sind',
         'Gruppendruck erkennen – und „Nein“ sagen lernen',
@@ -296,6 +428,8 @@ class Component extends DCLogic {
     { id: 't3', field: '7.1', title: 'Anders ist ganz normal',
       dossier: 'inputs/Anders-ist-normal.dc.html',
       leitfrage: 'Warum stecken wir Menschen in Schubladen – und was richtet das an?',
+      situation: 'An vielen Schulen und Orten erleben Kinder Vorurteile wegen Herkunft, Aussehen oder Hobbys.',
+      frage: 'Wie können wir …, damit Vielfalt an unserer Schule und in unserer Gemeinde sichtbar wertgeschätzt wird?',
       points: [
         'Vorurteile und Klischees: wie sie entstehen',
         'Ausgrenzung, Rassismus und Diskriminierung im Alltag',
@@ -305,6 +439,8 @@ class Component extends DCLogic {
     { id: 't4', field: '7.1', title: 'Stopp! Wenn aus Spaß Ernst wird – (Cyber-)Mobbing',
       dossier: 'inputs/Mobbing.dc.html',
       leitfrage: 'Was kann ich tun, wenn jemand fertiggemacht wird – online wie offline?',
+      situation: 'Mobbing passiert oft vor den Augen vieler – trotzdem trauen sich die wenigsten einzugreifen.',
+      frage: 'Wie können wir …, damit mehr Menschen bei Mobbing hinschauen statt wegzuschauen?',
       points: [
         'Was ist Mobbing – und wo fängt es an?',
         'Rollen: Täter, Opfer und die Macht der Zuschauer',
@@ -314,6 +450,8 @@ class Component extends DCLogic {
     { id: 't5', field: '7.1', title: 'Familie heute – bunt und im Wandel',
       dossier: 'inputs/Familie.dc.html',
       leitfrage: 'Was macht eine Familie eigentlich aus, wenn es so viele Formen gibt?',
+      situation: 'Nicht jede Familie sieht gleich aus – manche Kinder fühlen sich mit ihrer Familienform allein.',
+      frage: 'Wie können wir …, damit sich alle Familienformen in unserer Schule und Gemeinde willkommen fühlen?',
       points: [
         'Familie früher und heute: Lebensformen im Wandel',
         'Patchwork, alleinerziehend, Regenbogenfamilie & Co.',
@@ -323,6 +461,8 @@ class Component extends DCLogic {
     { id: 't6', field: '7.1', title: 'Streiten will gelernt sein',
       dossier: 'inputs/Streiten.dc.html',
       leitfrage: 'Wie lösen wir einen Streit so, dass am Ende niemand verliert?',
+      situation: 'Konflikte in der Klasse oder im Ort eskalieren oft, weil niemand vermittelt.',
+      frage: 'Wie können wir …, damit Streit in unserer Schule fair gelöst wird, statt zu eskalieren?',
       points: [
         'Konflikt und Konsens: Streit gehört zum Zusammenleben',
         'Faire Regeln statt einfach lauter werden',
@@ -332,6 +472,8 @@ class Component extends DCLogic {
     { id: 't7', field: '7.2', title: 'Deine Stimme zählt – an deiner Schule',
       dossier: 'inputs/Mitbestimmung-Schule.dc.html',
       leitfrage: 'Wie kann ich an meiner Schule wirklich etwas verändern?',
+      situation: 'Viele Schüler:innen wissen nicht, wie sie eigene Ideen tatsächlich in der Schule einbringen können.',
+      frage: 'Wie können wir …, damit mehr Schüler:innen ihre Ideen aktiv in der Schule einbringen?',
       points: [
         'Klassenrat, Klassensprecher:in und Schülervertretung',
         'Mitbestimmen in der Schulkonferenz',
@@ -341,6 +483,8 @@ class Component extends DCLogic {
     { id: 't8', field: '7.2', title: 'Politik zum Anfassen – meine Gemeinde',
       dossier: 'inputs/Kommunalpolitik.dc.html',
       leitfrage: 'Wer entscheidet eigentlich über Skatepark, Bus und Schwimmbad?',
+      situation: 'Viele Jugendliche wissen nicht, wer über Skatepark, Bus oder Schwimmbad in ihrer Gemeinde entscheidet.',
+      frage: 'Wie können wir …, damit Jugendliche in unserer Gemeinde stärker mitbestimmen können?',
       points: [
         'Wie eine Gemeinde funktioniert (kommunale Selbstverwaltung)',
         'Wofür ist das Geld da? Einnahmen und Ausgaben',
@@ -350,6 +494,8 @@ class Component extends DCLogic {
     { id: 't9', field: '7.2', title: 'Klima schützen beginnt vor der Haustür',
       dossier: 'inputs/Klimaschutz-vor-Ort.dc.html',
       leitfrage: 'Was kann ich ganz konkret für Umwelt und Klima tun?',
+      situation: 'Klimaschutz wirkt oft groß und weit weg – dabei ließe sich direkt vor Ort schon viel bewegen.',
+      frage: 'Wie können wir …, damit in unserer Gemeinde konkret mehr für das Klima getan wird?',
       points: [
         'Müll vermeiden und richtig trennen',
         'Wasser, Verkehr und Energie in meiner Stadt',
@@ -359,6 +505,8 @@ class Component extends DCLogic {
     { id: 't10', field: '7.3', title: 'Wo bleibt eigentlich mein Geld?',
       dossier: 'inputs/Taschengeld-Budget.dc.html',
       leitfrage: 'Wie behalte ich den Überblick über mein (Taschen-)Geld?',
+      situation: 'Viele Jugendliche geraten durch Ratenkäufe und Spontankäufe schnell in finanzielle Schwierigkeiten.',
+      frage: 'Wie können wir …, damit Jugendliche selbstbewusster mit ihrem Geld umgehen?',
       points: [
         'Einnahmen und Ausgaben: ein einfaches Budget aufstellen',
         'Bedürfnis oder Wunsch – was brauche ich wirklich?',
@@ -368,6 +516,8 @@ class Component extends DCLogic {
     { id: 't11', field: '7.3', title: 'Kauf mich! Wie Werbung dich kriegt',
       dossier: 'inputs/Werbung.dc.html',
       leitfrage: 'Warum will ich plötzlich Dinge haben, die ich gar nicht brauche?',
+      situation: 'Werbung und Influencer beeinflussen Kaufentscheidungen, oft ohne dass es den Käufer:innen auffällt.',
+      frage: 'Wie können wir …, damit schon jüngere Kinder Werbetricks frühzeitig durchschauen?',
       points: [
         'Werbetricks: Farben, Stars und Gefühle',
         'Influencer und versteckte Werbung erkennen',
@@ -377,6 +527,8 @@ class Component extends DCLogic {
     { id: 't12', field: '7.4', title: 'Fake oder Fakt?',
       dossier: 'inputs/Fake-oder-Fakt.dc.html',
       leitfrage: 'Woran erkenne ich, ob etwas im Netz wirklich stimmt?',
+      situation: 'Kinder nutzen bereits in der Grundschule Handys und müssen im Umgang begleitet werden, um Fake zu erkennen.',
+      frage: 'Wie können wir bereits in der Grundschule vermitteln, was der Unterschied zwischen Fakt und Fake ist?',
       points: [
         'Fake News: wie Falschmeldungen entstehen und sich verbreiten',
         'Quellen prüfen: Wer sagt das – und warum?',
@@ -386,6 +538,8 @@ class Component extends DCLogic {
     { id: 't13', field: '7.4', title: 'Mein Handy und ich',
       dossier: 'inputs/Handynutzung.dc.html',
       leitfrage: 'Wer bestimmt eigentlich – ich oder mein Smartphone?',
+      situation: 'Viele Jugendliche verbringen mehr Zeit am Handy, als ihnen guttut, und merken es selbst kaum.',
+      frage: 'Wie können wir …, damit ein bewussterer Umgang mit dem Handy an unserer Schule gelingt?',
       points: [
         'Bildschirmzeit: Wie viel ist zu viel?',
         'Warum Apps süchtig machen (Likes, Streaks, Push)',
@@ -393,9 +547,23 @@ class Component extends DCLogic {
         'Digitale Pausen: Tipps für mehr Selbstkontrolle'
       ] },
 
+    { id: 't14', field: '7.4', title: 'Kannst du der KI vertrauen?',
+      dossier: 'inputs/KI-Chancen-Grenzen.dc.html',
+      leitfrage: 'Was kann Künstliche Intelligenz wirklich – und wo täuscht sie mich?',
+      situation: 'Immer mehr Jugendliche fragen KI-Chatbots wie eine Suchmaschine – und glauben unhinterfragt, was dabei herauskommt.',
+      frage: 'Wie können wir …, damit KI beim Lernen hilft, ohne dass wir ihr blind vertrauen?',
+      points: [
+        'Wie ein Sprachmodell funktioniert – und warum es nicht „weiss“',
+        'Halluzinationen: wenn KI selbstsicher etwas Falsches erfindet',
+        'Prompts: wie die eigene Frage die Antwort verändert',
+        'Verantwortungsvoller Umgang: KI nutzen, ohne sich zu verlassen'
+      ] },
+
     { id: 'g1', field: 'GB', title: 'Kommune, Gemeinde, Stadt – wer ist was?',
       dossier: 'inputs/Kommune-Gemeinde-Rollen.dc.html',
       leitfrage: 'Was ist eigentlich eine Kommune – und wer hat dort das Sagen?',
+      situation: 'Viele Bürger:innen – auch Jugendliche – wissen nicht, wer im Rathaus wofür zuständig ist.',
+      frage: 'Wie können wir …, damit mehr Menschen wissen, wie sie ihre Gemeinde erreichen und mitgestalten können?',
       points: [
         'Kommune & Gemeinde: Was die Begriffe bedeuten – und der Unterschied zur Stadt',
         'Die Rollen: Bürgermeister:in, Gemeinderat und Verwaltung – wer macht was?',
@@ -405,6 +573,8 @@ class Component extends DCLogic {
     { id: 'g2', field: 'GB', title: 'Gemeinde, Land, Bund – die drei Ebenen',
       dossier: 'inputs/Ebenen-Kommune-Land-Bund.dc.html',
       leitfrage: 'Wer macht welche Gesetze – die Gemeinde, das Land oder der Bund?',
+      situation: 'Unklare Zuständigkeiten zwischen Gemeinde, Land und Bund führen oft dazu, dass sich niemand verantwortlich fühlt.',
+      frage: 'Wie können wir …, damit Verantwortlichkeiten für ein lokales Problem klar sichtbar werden?',
       points: [
         'Die drei politischen Ebenen: Kommune, Bundesland, Bund',
         'Föderalismus: Warum Schule in Hessen anders geregelt ist als in Bayern',
@@ -414,6 +584,8 @@ class Component extends DCLogic {
     { id: 'g3', field: 'GB', title: 'Was heißt eigentlich Demokratie?',
       dossier: 'inputs/Was-ist-Demokratie.dc.html',
       leitfrage: 'Was bedeutet „Herrschaft des Volkes“ – und was hat das mit mir zu tun?',
+      situation: 'Viele Jugendliche verbinden mit Demokratie vor allem das Wählen – aber noch nicht, dass sie selbst schon mitwirken können.',
+      frage: 'Wie können wir …, damit Jugendliche erleben, dass Demokratie mehr ist als nur Wählen?',
       points: [
         'Demokratie wörtlich genommen: die Herrschaft des Volkes',
         'Wahlen: frei, gleich, geheim – warum das so wichtig ist',
@@ -423,6 +595,8 @@ class Component extends DCLogic {
     { id: 'g4', field: 'GB', title: 'Grundgesetz & Grundrechte',
       dossier: 'inputs/Grundgesetz-Grundrechte.dc.html',
       leitfrage: 'Was ist eine Verfassung – und welche Rechte habe ich von Geburt an?',
+      situation: 'Grundrechte gelten für alle Menschen – doch im Alltag werden sie nicht überall wirklich geachtet.',
+      frage: 'Wie können wir …, damit die Menschenwürde aller Menschen in unserem Ort sichtbar geachtet wird?',
       points: [
         'Das Grundgesetz: die wichtigsten Spielregeln unseres Staates',
         'Grundrechte: Würde, Freiheit, Gleichheit (Art. 1–3 GG)',
@@ -432,15 +606,30 @@ class Component extends DCLogic {
     { id: 'g5', field: 'GB', title: 'Bedürfnis, Bedarf, Markt – Wirtschaft erklärt',
       dossier: 'inputs/Beduerfnis-Bedarf-Markt.dc.html',
       leitfrage: 'Was passiert eigentlich, wenn wir „wirtschaften“?',
+      situation: 'Viele Menschen konsumieren, ohne sich bewusst zu machen, was sie eigentlich brauchen.',
+      frage: 'Wie können wir …, damit bewussterer Konsum in unserer Schule und Gemeinde gefördert wird?',
       points: [
         'Bedürfnis, Wunsch und Bedarf: Wo genau der Unterschied liegt',
         'Knappe Güter: Warum wir nicht alles haben können',
         'Angebot & Nachfrage: Wie ein Preis überhaupt entsteht',
         'Der private Haushalt als kleiner Wirtschaftsbetrieb'
       ] },
+    { id: 'g7', field: 'GB', title: 'Warum ist Demokratie gut für mich?',
+      dossier: 'inputs/Demokratie-Warum-wichtig.dc.html',
+      leitfrage: 'Warum ist Demokratie gut für mich – was würde ohne sie passieren?',
+      situation: 'Viele Jugendliche nehmen ihre Rechte als selbstverständlich hin, ohne zu wissen, was ohne Demokratie fehlen würde.',
+      frage: 'Wie können wir …, damit Jugendliche erkennen, warum Demokratie ihren Alltag konkret schützt?',
+      points: [
+        'Rechte, die du täglich nutzt: Meinungsfreiheit, Versammlung, faires Verfahren',
+        'Diktatur vs. Demokratie: Was sich ohne Kontrolle der Macht ändern würde',
+        'Gewaltenteilung: warum niemand allein entscheiden darf',
+        'Demokratie pflegen: mehr als nur alle vier Jahre wählen'
+      ] },
     { id: 'g6', field: 'GB', title: 'Nachricht, Meinung, Quelle – Medien erklärt',
       dossier: 'inputs/Medien-Nachricht-Meinung-Quelle.dc.html',
       leitfrage: 'Was sind „Medien“ überhaupt – und wie unterscheide ich Fakt von Meinung?',
+      situation: 'In Diskussionen – auch in der Familie oder im Freundeskreis – wird oft nicht zwischen Fakten und Meinungen unterschieden.',
+      frage: 'Wie können wir …, damit in unserem Umfeld klarer zwischen Fakten und Meinungen unterschieden wird?',
       points: [
         'Medien: Was alles dazugehört (Zeitung, TV, Social Media …)',
         'Information und Meinung: zwei ganz verschiedene Dinge',
@@ -512,8 +701,12 @@ class Component extends DCLogic {
       };
     });
 
+    const klaerungCards = this.topics.filter(t => t.situation).map(t => ({
+      title: t.title, situation: t.situation, frage: t.frage
+    }));
+
     return {
-      chips, filteredCards,
+      chips, filteredCards, klaerungCards,
       selectedCount: Object.keys(selected).length,
       resetSelection: () => this.reset(),
       printPage: () => this.print()

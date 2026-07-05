@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  .doc-frame{width:100%;border-collapse:collapse}
+  .doc-frame td{padding:0}
+  .hdr-space,.ftr-space{display:none}
+  .avoid{break-inside:avoid}
+  @page{size:A4;margin:0}
+  @media print{
+    html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .sheet{box-shadow:none!important;margin:0!important;border-radius:0!important;width:100%!important;min-height:auto!important}
+    .hdr-space,.ftr-space{display:table-cell;height:14mm}
+    h1,h2,h3,h4{break-after:avoid}
+    p,li{orphans:3;widows:3}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:820px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / als PDF speichern</button>
+  </div>
+
+  <div class="sheet" style="max-width:820px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:20px;">
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.55 0.18 305); color:#fff; font:700 12px 'Schibsted Grotesk',sans-serif;">Tag 4 · Checkpoint</span>
+        <span style="padding:4px 11px; border-radius:999px; background:#efe9dc; color:#6f665a; font:600 12px 'Schibsted Grotesk',sans-serif;">Übergang in Phase 3 · Planung/Durchführung</span>
+      </div>
+
+      <h1 style="margin:0 0 6px; font:700 32px/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#1f1a15;">Projekt-Pitch im Plenum</h1>
+      <p style="margin:0 0 26px; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Der letzte Schritt der Klärungsphase: Eure Projektidee kurz vorstellen — und damit den Checkpoint für Phase 3 erreichen.</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; padding:18px 20px; background:#faf7f0; margin-bottom:26px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:8px;">Ablauf im Plenum</div>
+        <p style="margin:0; font:400 15px/1.55 'Source Serif 4',Georgia,serif; color:#352f28;">Jede Gruppe: <b>3 Minuten Pitch</b> + <b>2 Minuten Rückfragen</b> aus Plenum/Lehrkraft. Kein Plakat nötig — der ausgefüllte Steckbrief unten reicht als Grundlage.</p>
+      </div>
+
+      <h2 style="margin:0 0 14px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Steckbrief — vor dem Pitch ausfüllen</h2>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:28px;">
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Unsere Problemfrage</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Zielgruppe unseres Projekts</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Unser Nachhaltigkeitsziel (SDG) — und warum</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Was wir aus Recherche &amp; Interview gelernt haben (1–2 Belege)</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px; margin-bottom:8px;"></div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Unsere geplante Maßnahme (kurz)</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Was wir noch brauchen (Ressourcen, Ansprechpartner:innen)</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+        <div class="avoid" style="border:1px solid #e8e2d6; border-radius:11px; padding:14px 16px;">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15; margin-bottom:8px;">Woran wir erkennen, dass unser Projekt gewirkt hat</div>
+          <div style="border-bottom:1px dotted #d8d1c2; height:22px;"></div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:18px 20px; background:oklch(0.55 0.18 305 / 0.09); border:1px solid oklch(0.55 0.18 305 / 0.25);">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:10px;">Checkpoint-Kriterien (für die Lehrkraft)</div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Problemfrage ist konkret &amp; lokal formuliert</div>
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Mindestens ein Beleg aus der Dossier-Recherche wird genannt</div>
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Eine Erkenntnis aus dem Interview wird genannt (oder nachvollziehbar begründet, warum keins stattfand)</div>
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Zielgruppe ist klar benannt</div>
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Ein Nachhaltigkeitsziel (SDG) ist benannt und begründet</div>
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Die geplante Maßnahme ist konkret genug, um am nächsten Projekttag direkt in die Planung zu starten</div>
+          <div style="font:400 13.5px/1.5 'Schibsted Grotesk',sans-serif; color:#3b352d;">☐ Team-Plakat ist mit den feststehenden Pitch-Inhalten angelegt und fotografiert</div>
+        </div>
+        <p style="margin:12px 0 0; font:400 13px/1.5 'Schibsted Grotesk',sans-serif; color:#5a5247;">Erfüllt eine Gruppe die Kriterien noch nicht vollständig, erhält sie ein kurzes, konkretes Feedback und schärft den Steckbrief nach — der Checkpoint ist kein Ausschluss, sondern eine Qualitätssicherung vor dem Start in Phase 3.</p>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:16px 18px; background:#faf7f0; border:1px solid #ece6da; margin-top:20px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:#9a8f7d; margin-bottom:7px;">Direkt im Anschluss</div>
+        <p style="margin:0; font:400 13.5px/1.55 'Source Serif 4',Georgia,serif; color:#433d35;">Mit den feststehenden Pitch-Inhalten füllt eure Gruppe das <a href="Team-Plakat-Vorlage.dc.html" style="color:oklch(0.5 0.13 58); font-weight:700; text-decoration:none;">Team-Plakat</a> aus (A3, Kanban-Spalten). Es begleitet euch durch Planung &amp; Durchführung — jede Aktualisierung wird fotografiert und in die Dokumentationsmappe eingefügt.</p>
+      </div>
+
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

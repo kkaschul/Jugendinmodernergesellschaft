@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Schibsted+Grotesk:wght@400..600&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#e9e5dc}
+  .doc-frame{width:100%;border-collapse:collapse}
+  .doc-frame td{padding:0}
+  .hdr-space,.ftr-space{display:none}
+  .avoid{break-inside:avoid}
+  @page{size:A4;margin:0}
+  @media print{
+    html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    html,body{margin:0;padding:0;background:#fff}
+    .screen-only{display:none!important}
+    .stage{padding:0!important;background:#fff!important}
+    .sheet{box-shadow:none!important;margin:0!important;border-radius:0!important;width:100%!important;min-height:auto!important}
+    .hdr-space,.ftr-space{display:table-cell;height:14mm}
+    h1,h2,h3,h4{break-after:avoid}
+    p,li{orphans:3;widows:3}
+  }
+</style>
+</helmet>
+<div class="stage" style="background:#e9e5dc; padding:34px 20px 70px; font-family:'Schibsted Grotesk',system-ui,sans-serif;">
+
+  <div class="screen-only" style="max-width:820px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <a href="../Themen-Pinnwand.dc.html" style="text-decoration:none; font:600 14px 'Schibsted Grotesk',sans-serif; color:#6f665a; display:inline-flex; align-items:center; gap:7px;">← Zurück zur Pinnwand</a>
+    <button onclick="window.print()" style="cursor:pointer; padding:9px 18px; border-radius:10px; border:1.5px solid #2c2722; background:#2c2722; color:#fff; font:600 13px 'Schibsted Grotesk',sans-serif;">Drucken / als PDF speichern</button>
+  </div>
+
+  <div class="sheet" style="max-width:820px; margin:0 auto; background:#fffdf8; box-shadow:0 6px 24px rgba(40,30,20,.10); padding:54px clamp(26px,5vw,58px) 60px;">
+    <table class="doc-frame" role="presentation"><thead><tr><td class="hdr-space"></td></tr></thead><tbody><tr><td>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-bottom:20px;">
+        <span style="padding:4px 11px; border-radius:999px; background:oklch(0.55 0.18 305); color:#fff; font:700 12px 'Schibsted Grotesk',sans-serif;">Pflichtinput · Tag 1</span>
+        <span style="padding:4px 11px; border-radius:999px; background:#efe9dc; color:#6f665a; font:600 12px 'Schibsted Grotesk',sans-serif;">ca. 20 Minuten</span>
+      </div>
+
+      <h1 style="margin:0 0 6px; font:700 32px/1.1 'Bricolage Grotesque',sans-serif; letter-spacing:-.02em; color:#1f1a15;">Wie stelle ich eine gute Problemfrage?</h1>
+      <p style="margin:0 0 26px; font:500 16px/1.5 'Schibsted Grotesk',sans-serif; color:#6f665a;">Auftakt der Klärungsphase — jede Gruppenbildung und jedes Projekt beginnt mit einer guten Frage.</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; padding:18px 20px; background:#faf7f0; margin-bottom:26px;">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.13em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:8px;">Ziel des Inputs</div>
+        <p style="margin:0; font:400 15px/1.55 'Source Serif 4',Georgia,serif; color:#352f28;">Ihr könnt aus einer eigenen Handlungssituation eine <b>Problemfrage</b> im Format „Wie können wir …, damit …?" formulieren — offen genug für mehrere Lösungen, aber konkret genug, um wirklich etwas zu planen.</p>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Das Format: „Wie können wir …, damit …?"</h2>
+      <p style="margin:0 0 16px; font:400 14.5px/1.6 'Source Serif 4',Georgia,serif; color:#312b24;">Dieses Frageformat stammt aus dem Design Thinking (dort „How Might We" genannt). Es zwingt euch, ein Problem als <b>offene Einladung</b> zu formulieren — nicht als bereits entschiedene Lösung. „Wie können wir einen Skatepark bauen?" ist keine gute Problemfrage (die Lösung steht schon fest). „Wie können wir …, damit Jugendliche in unserer Gemeinde einen Ort zum Treffen haben?" lässt viele Lösungen offen — der Skatepark ist nur eine davon.</p>
+
+      <div class="avoid" style="border:1px solid #e8e2d6; border-radius:13px; overflow:hidden; margin-bottom:22px;">
+        <div style="background:#f3eee3; padding:10px 16px; font:700 12px 'Schibsted Grotesk',sans-serif; color:#1f1a15;">Vier Kriterien einer guten Problemfrage</div>
+        <div style="display:flex; flex-direction:column;">
+          <div style="padding:12px 16px; border-top:1px solid #ece6da; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:18px;">1</span><span style="font:400 14px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Beginnt mit <b>„Wie können wir …, damit …?"</b></span></div>
+          <div style="padding:12px 16px; border-top:1px solid #ece6da; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:18px;">2</span><span style="font:400 14px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Nennt ein <b>Ziel/einen Nutzen</b> — nicht schon die Lösung</span></div>
+          <div style="padding:12px 16px; border-top:1px solid #ece6da; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:18px;">3</span><span style="font:400 14px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Ist <b>konkret &amp; lokal</b> genug, um daraus wirklich etwas zu planen</span></div>
+          <div style="padding:12px 16px; border-top:1px solid #ece6da; display:flex; gap:12px;"><span style="font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:18px;">4</span><span style="font:400 14px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Ist <b>offen genug</b> für mehrere mögliche Lösungswege</span></div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px;">
+        <div style="border:1px solid #e8e2d6; border-radius:11px; padding:13px 15px; background:oklch(0.62 0.16 25 / 0.06);">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#b5562e; margin-bottom:6px;">Eher ungeeignet</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">„Sollten wir Plakate gegen Mobbing aufhängen?"<br><span style="color:#9a8f7d; font-size:12px;">(Lösung steht schon fest, nur Ja/Nein möglich)</span></div>
+        </div>
+        <div style="border:1px solid #e8e2d6; border-radius:11px; padding:13px 15px; background:oklch(0.55 0.13 150 / 0.08);">
+          <div style="font:700 12px 'Schibsted Grotesk',sans-serif; color:#2f7d5b; margin-bottom:6px;">Besser</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">„Wie können wir …, damit an unserer Schule mehr Menschen bei Mobbing hinschauen statt wegzuschauen?"</div>
+        </div>
+      </div>
+
+      <h2 style="margin:0 0 12px; font:700 19px 'Bricolage Grotesque',sans-serif; color:#1f1a15;">Ablauf (ca. 20 Min)</h2>
+      <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:26px;">
+        <div class="avoid" style="display:flex; gap:14px; border-left:4px solid oklch(0.55 0.18 305); background:#faf7f0; border-radius:0 11px 11px 0; padding:12px 16px;">
+          <div style="flex:0 0 auto; font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:64px;">0–5 Min</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Format &amp; Kriterien vorstellen (siehe oben).</div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; border-left:4px solid oklch(0.55 0.18 305); background:#faf7f0; border-radius:0 11px 11px 0; padding:12px 16px;">
+          <div style="flex:0 0 auto; font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:64px;">5–12 Min</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">In Partnerarbeit: 2–3 Beispielfragen von der Pinnwand mit den vier Kriterien prüfen — was fehlt, was passt?</div>
+        </div>
+        <div class="avoid" style="display:flex; gap:14px; border-left:4px solid oklch(0.55 0.18 305); background:#faf7f0; border-radius:0 11px 11px 0; padding:12px 16px;">
+          <div style="flex:0 0 auto; font:700 13px 'Schibsted Grotesk',sans-serif; color:oklch(0.44 0.16 305); min-width:64px;">12–20 Min</div>
+          <div style="font:400 13.5px/1.5 'Source Serif 4',Georgia,serif; color:#433d35;">Jede:r wählt die eigene Handlungssituation von der Pinnwand und schreibt eine eigene Problemfrage. Peer-Check mit Partner:in gegen die vier Kriterien.</div>
+        </div>
+      </div>
+
+      <div class="avoid" style="border-radius:13px; padding:16px 18px; background:oklch(0.55 0.18 305 / 0.08); border:1px solid oklch(0.55 0.18 305 / 0.25);">
+        <div style="font:700 11px 'Schibsted Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:oklch(0.44 0.16 305); margin-bottom:7px;">Weiter geht's</div>
+        <p style="margin:0; font:400 13.5px/1.55 'Source Serif 4',Georgia,serif; color:#433d35;">Mit der eigenen Problemfrage in der Hand startet die vertiefende Recherche in den Dossiers — siehe <b>„Vertiefung: Recherche &amp; Experten-Interview"</b> auf der Pinnwand.</p>
+      </div>
+
+    </td></tr></tbody><tfoot><tr><td class="ftr-space"></td></tr></tfoot></table>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
